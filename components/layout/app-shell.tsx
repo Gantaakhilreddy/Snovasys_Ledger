@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useAuth, isRouteAllowedForRole, getDefaultRouteForRole } from '@/lib/context/auth-context';
+import { ThemeToggle } from '@/components/theme/theme-toggle';
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -26,10 +27,10 @@ export function AppShell({ children, activePath }: AppShellProps) {
     const isActive =
       pathname === path ||
       (path !== '/dashboard' && path !== '/admin' && path !== '/auditor' && pathname.startsWith(path));
-    return `flex items-center gap-2.5 px-3 py-2 rounded-lg transition-all font-label-md text-label-md ${
+    return `group flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all duration-200 font-label-md text-label-md select-none ${
       isActive
-        ? 'bg-surface-container-lowest/15 text-on-primary font-semibold shadow-sm'
-        : 'text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary'
+        ? 'bg-gradient-to-r from-indigo-500/20 via-indigo-500/10 to-transparent text-white font-bold border-l-2 border-indigo-400 shadow-xs'
+        : 'text-slate-400 hover:text-white hover:bg-white/5 font-medium'
     }`;
   };
 
@@ -84,7 +85,7 @@ export function AppShell({ children, activePath }: AppShellProps) {
           <div className="px-4 py-2">
             <div className="bg-surface-container-lowest/5 rounded-xl p-3 border border-white/10 backdrop-blur-sm">
               <div className="flex items-center justify-between mb-1.5">
-                <span className="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider text-[10px] font-semibold">
+                <span className="font-label-sm text-label-sm text-slate-400 uppercase tracking-wider text-[10px] font-bold">
                   Operating Role
                 </span>
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold tracking-wide bg-tertiary-fixed/20 text-tertiary-fixed border border-tertiary-fixed/30">
@@ -92,7 +93,7 @@ export function AppShell({ children, activePath }: AppShellProps) {
                   {role === 'ADMIN' ? 'SYS_ADMIN' : role === 'AUDITOR' ? 'AUDITOR_SEC' : 'HOLDER'}
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-on-primary font-semibold text-xs">
+              <div className="flex items-center gap-2 text-white font-semibold text-xs">
                 <span className="material-symbols-outlined text-base text-tertiary-fixed">
                   {role === 'ADMIN' ? 'admin_panel_settings' : role === 'AUDITOR' ? 'verified_user' : 'account_balance_wallet'}
                 </span>
@@ -100,7 +101,7 @@ export function AppShell({ children, activePath }: AppShellProps) {
                   {role === 'ADMIN' ? 'System Administrator' : role === 'AUDITOR' ? 'Compliance Auditor' : 'Account Holder'}
                 </span>
               </div>
-              <div className="text-[10px] text-on-primary-container/80 pt-1 font-mono">
+              <div className="text-[10px] text-slate-300 pt-1 font-mono">
                 {role === 'ADMIN'
                   ? 'Full Platform Authority'
                   : role === 'AUDITOR'
@@ -111,7 +112,14 @@ export function AppShell({ children, activePath }: AppShellProps) {
           </div>
 
           {/* Navigation Links - Role Segregated */}
-          <nav className="px-4 py-2 flex flex-col gap-4">
+          <nav
+            onClick={(e) => {
+              if ((e.target as HTMLElement).closest('a')) {
+                setMobileMenuOpen(false);
+              }
+            }}
+            className="px-4 py-2 flex flex-col gap-4"
+          >
             {/* 1. ACCOUNT HOLDER: Personal Banking */}
             {role === 'ACCOUNT_HOLDER' && (
               <div className="flex flex-col gap-1">
@@ -306,15 +314,21 @@ export function AppShell({ children, activePath }: AppShellProps) {
           </div>
 
           {/* Right Header Badges & Profile */}
-          <div className="flex items-center gap-3 sm:gap-4">
-            <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low text-xs">
-              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <div className="flex items-center gap-2.5 sm:gap-3.5">
+            <div className="hidden lg:flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-surface-container-high text-xs shadow-xs">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
               <span className="font-label-sm text-label-sm text-on-surface-variant font-medium">
                 AES-256 Validated
               </span>
               <span className="text-outline-variant">•</span>
-              <span className="font-label-sm text-label-sm text-on-surface-variant">99.99% Uptime</span>
+              <span className="font-label-sm text-label-sm text-on-surface-variant font-mono">99.99% Uptime</span>
             </div>
+
+            {/* Light / Dark Mode Toggle */}
+            <ThemeToggle />
 
             {/* Notifications Bell */}
             <div className="relative">
@@ -376,8 +390,10 @@ export function AppShell({ children, activePath }: AppShellProps) {
                     {role}
                   </span>
                 </div>
-                <div className="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-xs ring-1 ring-surface-container-high">
-                  {user?.full_name ? user.full_name.charAt(0).toUpperCase() : 'U'}
+                <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-cyan-400 p-[1.5px] shadow-xs">
+                  <div className="w-full h-full rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center font-bold text-xs">
+                    {user?.full_name ? user.full_name.charAt(0).toUpperCase() : 'U'}
+                  </div>
                 </div>
                 <span className="material-symbols-outlined text-on-surface-variant text-base hidden sm:block">
                   expand_more

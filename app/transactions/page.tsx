@@ -201,13 +201,13 @@ export default function TransactionHistoryPage() {
         {/* 4 KPI Metrics Strip */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
           {/* Card 1: Net Ledger Flow (Featured Dark Institutional) */}
-          <div className="bg-primary-container text-on-primary rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden">
+          <div className="bg-primary-container text-white rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden border border-white/10">
             <div className="absolute right-0 top-0 translate-x-4 -translate-y-4 w-32 h-32 bg-secondary/15 rounded-full blur-2xl pointer-events-none"></div>
             <div className="flex items-center justify-between">
-              <span className="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase font-semibold">
+              <span className="font-label-sm text-label-sm text-slate-300 tracking-wider uppercase font-semibold">
                 Net Inflow Balance
               </span>
-              <span className="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-emerald-500/20 text-tertiary-fixed font-medium">
+              <span className="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-medium">
                 <span className="material-symbols-outlined text-xs">trending_up</span> Live
               </span>
             </div>
@@ -215,7 +215,7 @@ export default function TransactionHistoryPage() {
               <div className="font-headline-lg text-headline-lg font-bold tracking-tight text-white font-mono">
                 {netFlowPaise >= 0 ? '+' : ''}{formatINR(netFlowPaise)}
               </div>
-              <p className="font-body-sm text-body-sm text-on-primary-container mt-1">
+              <p className="font-body-sm text-body-sm text-slate-300 mt-1">
                 Net platform liquidity movement
               </p>
             </div>

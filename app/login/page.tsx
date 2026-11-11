@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/context/auth-context';
+import { ThemeToggle } from '@/components/theme/theme-toggle';
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -162,7 +163,11 @@ export default function LoginPage() {
       </div>
 
       {/* RIGHT SIDE: Authentication Workspace (7 cols on Desktop) */}
-      <div className="lg:col-span-7 flex flex-col justify-center items-center px-6 py-12 sm:px-12 md:px-16 lg:px-20 bg-surface">
+      <div className="lg:col-span-7 flex flex-col justify-center items-center px-6 py-12 sm:px-12 md:px-16 lg:px-20 bg-surface relative">
+        {/* Floating Top Bar with Theme Toggle */}
+        <div className="absolute top-6 right-6 sm:top-8 sm:right-8 z-20 flex items-center gap-3">
+          <ThemeToggle showLabel />
+        </div>
         <div className="w-full max-w-lg space-y-8">
           {/* Mobile Logo Header */}
           <div className="flex lg:hidden items-center gap-3 mb-6">

@@ -364,7 +364,7 @@ function TransferMoneyContent() {
               <button
                 type="submit"
                 disabled={isSubmitting || isOverBalance || !sourceAccountId || !destinationAccount.trim() || !amountRupees || user?.role === 'AUDITOR'}
-                className="px-6 py-3 rounded-lg bg-primary-container text-on-primary font-semibold text-xs flex items-center gap-2 hover:bg-secondary transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                className="px-6 py-3 rounded-lg bg-secondary text-white font-semibold text-xs flex items-center gap-2 hover:bg-secondary/90 transition-all shadow-xs disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
               >
                 <span className="material-symbols-outlined text-base">send</span>
                 {isSubmitting ? 'Verifying & Transferring...' : 'Transfer Money Now'}

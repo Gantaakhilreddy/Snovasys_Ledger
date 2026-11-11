@@ -245,10 +245,10 @@ export default function AccountDetailPage() {
             {user?.role !== 'AUDITOR' && (
               <button
                 onClick={() => router.push(`/transactions/transfer?from=${accountId}`)}
-                className="flex items-center gap-1.5 px-4 py-2 bg-primary text-on-primary rounded-lg shadow-md hover:bg-primary-container transition-all font-label-md text-label-md"
+                className="flex items-center gap-1.5 px-4 py-2 bg-secondary text-white rounded-lg shadow-xs hover:bg-secondary/90 transition-all font-label-md text-label-md font-semibold"
               >
                 <span className="material-symbols-outlined text-base">bolt</span>
-                <span className="font-semibold">Initiate Wire</span>
+                <span>Initiate Wire</span>
               </button>
             )}
           </div>
@@ -267,27 +267,27 @@ export default function AccountDetailPage() {
             {/* Hero Analytical KPI Ribbon */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
               {/* Current Ledger Balance (Spotlight Dark Card) */}
-              <div className="relative bg-primary-container text-on-primary rounded-xl p-space-lg flex flex-col justify-between overflow-hidden shadow-md">
+              <div className="relative bg-primary-container text-white rounded-xl p-space-lg flex flex-col justify-between overflow-hidden shadow-md border border-white/10">
                 <div className="absolute -right-10 -bottom-10 w-36 h-36 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
                 <div className="flex items-center justify-between">
-                  <span className="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider font-semibold">
+                  <span className="font-label-sm text-label-sm text-slate-300 uppercase tracking-wider font-semibold">
                     Current Ledger Balance
                   </span>
-                  <span className="material-symbols-outlined text-tertiary-fixed text-lg">
+                  <span className="material-symbols-outlined text-cyan-400 text-lg">
                     account_balance_wallet
                   </span>
                 </div>
                 <div className="mt-4 mb-2">
-                  <div className="font-headline-lg text-headline-lg font-bold tracking-tight text-on-primary tabular-nums">
+                  <div className="font-headline-lg text-headline-lg font-bold tracking-tight text-white tabular-nums">
                     {formatINR(account.balance_paise)}
                   </div>
-                  <p className="font-label-sm text-label-sm text-on-primary-container mt-1">
+                  <p className="font-label-sm text-label-sm text-slate-300 mt-1">
                     Real-time atomic settlement • Double-entry balanced
                   </p>
                 </div>
-                <div className="pt-2 flex items-center justify-between text-xs text-on-primary-container font-mono border-t border-surface-container-lowest/10">
+                <div className="pt-2 flex items-center justify-between text-xs text-slate-400 font-mono border-t border-surface-container-lowest/10">
                   <span>BASE: {account.currency}</span>
-                  <span className="text-tertiary-fixed-dim">Zero Variance Verified</span>
+                  <span className="text-cyan-400">Zero Variance Verified</span>
                 </div>
               </div>
 

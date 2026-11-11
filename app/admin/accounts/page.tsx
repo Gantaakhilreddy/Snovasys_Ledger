@@ -238,17 +238,17 @@ export default function AccountManagementPage() {
             </div>
           </div>
 
-          <div className="bg-primary-container text-on-primary p-space-lg rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden">
-            <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container font-semibold">
+          <div className="bg-primary-container text-white p-space-lg rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden border border-white/10">
+            <span className="font-label-sm text-label-sm uppercase tracking-wider text-slate-300 font-semibold">
               Total Custodial Balance
             </span>
             <div className="my-space-sm">
-              <span className="font-headline-sm text-headline-sm font-bold text-tertiary-fixed font-mono truncate block">
+              <span className="font-headline-sm text-headline-sm font-bold text-cyan-400 font-mono truncate block">
                 {formatINR(totalBalancePaise)}
               </span>
-              <p className="font-body-sm text-body-sm text-on-primary-container mt-1">Segregated Central Reserves</p>
+              <p className="font-body-sm text-body-sm text-slate-300 mt-1">Segregated Central Reserves</p>
             </div>
-            <div className="pt-2 border-t border-surface-container-lowest/10 text-xs text-on-primary-container font-mono">
+            <div className="pt-2 border-t border-surface-container-lowest/10 text-xs text-slate-400 font-mono">
               ZERO DEFICIT
             </div>
           </div>

@@ -458,20 +458,20 @@ export default function DepositWithdrawPage() {
               </div>
 
               {/* Inbound Deposit Trigger Panel (4 Cols) */}
-              <div className="lg:col-span-4 bg-primary-container text-on-primary rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+              <div className="lg:col-span-4 bg-primary-container text-white rounded-xl p-space-lg shadow-md flex flex-col justify-between border border-white/10">
                 <form onSubmit={handleDepositSubmit} className="flex flex-col gap-space-sm">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <span className="material-symbols-outlined text-tertiary-fixed-dim text-xl">payments</span>
-                      <span className="font-headline-sm text-headline-sm font-bold text-on-primary">
+                      <span className="material-symbols-outlined text-cyan-400 text-xl">payments</span>
+                      <span className="font-headline-sm text-headline-sm font-bold text-white">
                         {user?.role === 'ADMIN' ? 'Authorized Deposit' : 'Deposit Money Request'}
                       </span>
                     </div>
-                    <span className="px-2 py-0.5 rounded bg-surface-container-lowest/10 text-tertiary-fixed font-label-sm text-label-sm uppercase font-mono">
+                    <span className="px-2 py-0.5 rounded bg-surface-container-lowest/15 text-cyan-400 font-label-sm text-label-sm uppercase font-mono">
                       {user?.role === 'ADMIN' ? 'Direct Settle' : 'Pending Review'}
                     </span>
                   </div>
-                  <p className="font-body-sm text-body-sm text-on-primary-container">
+                  <p className="font-body-sm text-body-sm text-slate-300">
                     {user?.role === 'ADMIN'
                       ? 'As an Administrator, you can execute authorized deposits directly into any account with immediate balance crediting.'
                       : 'Submit a deposit request to add funds into your account. Once submitted, your request will be reviewed and approved by an administrator before funds are credited.'}
@@ -490,16 +490,16 @@ export default function DepositWithdrawPage() {
 
                   <div className="flex flex-col gap-3 mt-space-sm">
                     <div className="flex flex-col gap-1">
-                      <label className="font-label-sm text-label-sm text-on-primary-container uppercase font-semibold">
+                      <label className="font-label-sm text-label-sm text-slate-300 uppercase font-semibold">
                         Destination Account
                       </label>
                       <select
-                        className="w-full bg-surface-container-lowest/10 text-on-primary font-label-md text-label-md rounded-lg py-2 pl-3 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-tertiary-fixed cursor-pointer"
+                        className="w-full bg-white/10 text-white font-label-md text-label-md rounded-lg py-2 pl-3 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer border border-white/20"
                         value={selectedDepositAccountId}
                         onChange={(e) => setSelectedDepositAccountId(e.target.value)}
                       >
                         {accounts.map((a) => (
-                          <option key={a.id} className="bg-primary-container text-on-primary" value={a.id}>
+                          <option key={a.id} className="bg-slate-900 text-white" value={a.id}>
                             {a.account_type} •••• {a.account_number.slice(-4)} ({formatINR(a.balance_paise)})
                           </option>
                         ))}
@@ -508,17 +508,17 @@ export default function DepositWithdrawPage() {
 
                     <div className="flex flex-col gap-1">
                       <div className="flex justify-between items-center">
-                        <label className="font-label-sm text-label-sm text-on-primary-container uppercase font-semibold">
+                        <label className="font-label-sm text-label-sm text-slate-300 uppercase font-semibold">
                           Deposit Amount (₹)
                         </label>
-                        <span className="font-label-sm text-label-sm text-tertiary-fixed-dim">Zero Variance</span>
+                        <span className="font-label-sm text-label-sm text-cyan-400">Zero Variance</span>
                       </div>
                       <div className="relative">
-                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-on-primary-container font-headline-sm">
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-300 font-headline-sm">
                           ₹
                         </span>
                         <input
-                          className="w-full bg-surface-container-lowest/10 text-on-primary font-headline-sm text-headline-sm pl-8 pr-4 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-tertiary-fixed font-mono"
+                          className="w-full bg-white/10 text-white font-headline-sm text-headline-sm pl-8 pr-4 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-cyan-400 font-mono border border-white/20"
                           type="number"
                           step="0.01"
                           value={depositAmountRupees}
@@ -530,11 +530,11 @@ export default function DepositWithdrawPage() {
                     </div>
 
                     <div className="flex flex-col gap-1">
-                      <label className="font-label-sm text-label-sm text-on-primary-container uppercase font-semibold">
+                      <label className="font-label-sm text-label-sm text-slate-300 uppercase font-semibold">
                         Deposit Memo / Reason
                       </label>
                       <input
-                        className="w-full bg-surface-container-lowest/10 text-on-primary font-body-sm text-body-sm px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-tertiary-fixed"
+                        className="w-full bg-white/10 text-white font-body-sm text-body-sm px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-cyan-400 border border-white/20"
                         type="text"
                         value={depositDescription}
                         onChange={(e) => setDepositDescription(e.target.value)}

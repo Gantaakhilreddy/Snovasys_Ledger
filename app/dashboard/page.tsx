@@ -71,14 +71,14 @@ export default function UserDashboardPage() {
           <div className="flex flex-wrap items-center gap-2">
             <a
               href="/transactions/transfer"
-              className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md text-xs font-semibold shadow-sm hover:bg-secondary transition-all active:scale-95"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-secondary text-white font-label-md text-label-md text-xs font-semibold shadow-xs hover:bg-secondary/90 transition-all active:scale-95"
             >
               <span className="material-symbols-outlined text-base">send_money</span>
               Transfer Funds
             </a>
             <a
               href="/transactions/deposit-withdraw"
-              className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md text-xs font-semibold shadow-sm hover:opacity-90 transition-all active:scale-95"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-secondary text-white font-label-md text-label-md text-xs font-semibold shadow-xs hover:opacity-90 transition-all active:scale-95"
             >
               <span className="material-symbols-outlined text-base">input</span>
               Deposit &amp; Wire
@@ -96,17 +96,17 @@ export default function UserDashboardPage() {
         {/* Key Financial Metrics Bento Grid */}
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
           {/* Primary Hero Card (Total Liquidity) */}
-          <div className="lg:col-span-6 bg-primary-container text-on-primary rounded-xl p-6 shadow-md flex flex-col justify-between relative overflow-hidden">
+          <div className="lg:col-span-6 bg-primary-container text-white rounded-xl p-6 shadow-md flex flex-col justify-between relative overflow-hidden border border-white/10">
             <div className="absolute -right-12 -top-12 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
             <div className="absolute right-8 bottom-0 w-48 h-48 bg-tertiary-fixed-dim/10 rounded-full blur-2xl pointer-events-none"></div>
 
             <div className="relative z-10 flex flex-col gap-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container font-semibold text-xs">
+                  <span className="font-label-sm text-label-sm uppercase tracking-widest text-slate-300 font-semibold text-xs">
                     Total Liquidity &amp; Available
                   </span>
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-lowest/10 text-on-tertiary-fixed font-label-sm text-xs font-mono">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-lowest/15 text-cyan-400 font-label-sm text-xs font-mono">
                     {accounts.length} Accounts
                   </span>
                 </div>
@@ -114,7 +114,7 @@ export default function UserDashboardPage() {
 
               <div className="flex flex-col gap-1">
                 <div className="flex items-baseline gap-2 flex-wrap">
-                  <span className="font-headline-xl text-headline-xl font-bold tracking-tight text-on-primary tabular-nums">
+                  <span className="font-headline-xl text-headline-xl font-bold tracking-tight text-white tabular-nums">
                     {formatINR(totalBalancePaise)}
                   </span>
                   <span className="font-label-md text-label-md px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold inline-flex items-center gap-1 text-xs">
@@ -122,24 +122,24 @@ export default function UserDashboardPage() {
                     Balanced
                   </span>
                 </div>
-                <p className="font-body-sm text-body-sm text-on-primary-container flex items-center gap-1 text-xs">
-                  <span className="text-tertiary-fixed-dim font-medium">100% Reserve Backed</span> continuously reconciled in real-time
+                <p className="font-body-sm text-body-sm text-slate-300 flex items-center gap-1 text-xs">
+                  <span className="text-cyan-400 font-medium">100% Reserve Backed</span> continuously reconciled in real-time
                 </p>
               </div>
             </div>
 
             <div className="relative z-10 pt-4 mt-6 border-t border-surface-container-lowest/10 grid grid-cols-3 gap-2 text-xs">
               <div>
-                <span className="block text-on-primary-container">Ledger State</span>
-                <span className="font-semibold text-on-primary">Immutable</span>
+                <span className="block text-slate-400">Ledger State</span>
+                <span className="font-semibold text-white">Immutable</span>
               </div>
               <div>
-                <span className="block text-on-primary-container">Settlement</span>
-                <span className="font-semibold text-on-primary">Instant (Atomic)</span>
+                <span className="block text-slate-400">Settlement</span>
+                <span className="font-semibold text-white">Instant (Atomic)</span>
               </div>
               <div>
-                <span className="block text-on-primary-container">Audited Logs</span>
-                <span className="font-semibold text-tertiary-fixed-dim">Verified</span>
+                <span className="block text-slate-400">Audited Logs</span>
+                <span className="font-semibold text-cyan-400">Verified</span>
               </div>
             </div>
           </div>

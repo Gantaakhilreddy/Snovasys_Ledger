@@ -95,7 +95,7 @@ export default function MyAccountsPage() {
 
           <button
             onClick={() => setShowModal(true)}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-secondary font-label-md text-xs font-semibold shadow-sm transition-all active:scale-95 cursor-pointer self-start sm:self-center"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-secondary text-white hover:bg-secondary/90 font-label-md text-xs font-semibold shadow-xs transition-all active:scale-95 cursor-pointer self-start sm:self-center"
           >
             <span className="material-symbols-outlined text-base">add</span>
             Open New Account
@@ -103,15 +103,15 @@ export default function MyAccountsPage() {
         </section>
 
         {/* Aggregated Balance Banner */}
-        <section className="bg-primary-container text-on-primary rounded-xl p-6 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative overflow-hidden">
+        <section className="bg-primary-container text-white rounded-xl p-6 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative overflow-hidden border border-white/10">
           <div className="flex flex-col gap-1 relative z-10">
-            <span className="text-on-primary-container text-xs font-semibold uppercase tracking-wider">
+            <span className="text-slate-300 text-xs font-semibold uppercase tracking-wider">
               Total Combined Portfolio Balance
             </span>
-            <span className="font-headline-xl font-bold tracking-tight tabular-nums">
+            <span className="font-headline-xl font-bold tracking-tight tabular-nums text-white">
               {formatINR(totalPaise)}
             </span>
-            <span className="text-tertiary-fixed-dim text-xs flex items-center gap-1">
+            <span className="text-emerald-400 text-xs flex items-center gap-1 font-medium">
               <span className="material-symbols-outlined text-xs">verified</span>
               {accounts.length} Accounts actively monitored with zero reconciliation discrepancies
             </span>
@@ -120,13 +120,13 @@ export default function MyAccountsPage() {
           <div className="flex items-center gap-3 relative z-10">
             <a
               href="/transactions/transfer"
-              className="px-4 py-2 rounded-lg bg-secondary text-on-secondary font-semibold text-xs shadow-sm hover:opacity-90 transition-all"
+              className="px-4 py-2 rounded-lg bg-secondary text-white font-semibold text-xs shadow-xs hover:bg-secondary/90 transition-all"
             >
               Transfer Funds
             </a>
             <a
               href="/transactions/deposit-withdraw"
-              className="px-4 py-2 rounded-lg bg-surface-container-lowest/10 text-on-primary hover:bg-surface-container-lowest/20 font-semibold text-xs transition-all border border-white/10"
+              className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-all border border-white/20"
             >
               Deposit &amp; Wire
             </a>
@@ -219,7 +219,7 @@ export default function MyAccountsPage() {
                 </a>
                 <a
                   href={`/transactions/transfer?source=${acc.id}`}
-                  className="flex-1 text-center py-2 px-3 rounded-lg bg-primary-container text-on-primary hover:bg-secondary font-semibold text-xs transition-colors"
+                  className="flex-1 text-center py-2 px-3 rounded-lg bg-secondary hover:bg-secondary/90 text-white font-semibold text-xs transition-colors shadow-xs"
                 >
                   Transfer
                 </a>

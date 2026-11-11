@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <defs>
+    <linearGradient id="appleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="45%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="appleAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+  </defs>
+
+  <rect width="180" height="180" rx="40" fill="url(#appleBg)" />
+  <rect x="2" y="2" width="176" height="176" rx="38" stroke="rgba(255,255,255,0.15)" stroke-width="4" />
+
+  <!-- Pediment Arch -->
+  <path d="M40 65L90 35L140 65V74H40V65Z" fill="#F8FAFC" />
+  <circle cx="90" cy="55" r="7" fill="url(#appleAccent)" />
+
+  <!-- Pillars -->
+  <rect x="52" y="80" width="14" height="46" rx="4" fill="#F8FAFC" />
+  <rect x="83" y="80" width="14" height="46" rx="4" fill="url(#appleAccent)" />
+  <rect x="114" y="80" width="14" height="46" rx="4" fill="#F8FAFC" />
+
+  <!-- Base -->
+  <rect x="40" y="130" width="100" height="10" rx="3" fill="#F8FAFC" />
+  <rect x="32" y="143" width="116" height="10" rx="3" fill="url(#appleAccent)" />
+</svg>
+

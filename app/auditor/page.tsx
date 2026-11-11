@@ -180,29 +180,29 @@ export default function AuditorDashboardPage() {
           </div>
 
           {/* Card 2 (Featured Dark Card) */}
-          <div className="relative overflow-hidden flex flex-col justify-between p-space-md rounded-xl bg-primary-container text-on-primary shadow-md hover:shadow-lg transition-shadow">
+          <div className="relative overflow-hidden flex flex-col justify-between p-space-md rounded-xl bg-primary-container text-white shadow-md hover:shadow-lg transition-shadow border border-white/10">
             <div className="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-secondary/20 blur-2xl pointer-events-none"></div>
             <div className="flex items-center justify-between pb-space-xs relative z-10">
-              <span className="font-label-md text-label-md text-on-primary-container uppercase tracking-wider font-medium">
+              <span className="font-label-md text-label-md text-slate-300 uppercase tracking-wider font-medium">
                 Reconciled Attested Volume
               </span>
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/20 text-tertiary-fixed font-label-sm text-label-sm font-semibold">
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-label-sm text-label-sm font-semibold">
                 <span className="material-symbols-outlined text-xs">done_all</span> Clean Opinion
               </span>
             </div>
             <div className="flex flex-col gap-1 py-space-xs relative z-10">
-              <span className="font-headline-lg text-headline-lg text-on-primary tracking-tight tabular-nums font-bold font-mono">
+              <span className="font-headline-lg text-headline-lg text-white tracking-tight tabular-nums font-bold font-mono">
                 {formatINR(summary?.accounting?.totalDebitsPaise || summary?.balanceSheet?.assets?.centralReservePaise || 100000000)}
               </span>
-              <span className="font-body-sm text-body-sm text-on-primary-container">
+              <span className="font-body-sm text-body-sm text-slate-300">
                 Double-entry balanced to ₹0.00 variance
               </span>
             </div>
-            <div className="flex items-center justify-between pt-space-xs mt-space-xs bg-surface-container-lowest/10 px-space-sm py-1.5 rounded-lg relative z-10">
-              <span className="font-label-sm text-label-sm text-tertiary-fixed font-mono">
+            <div className="flex items-center justify-between pt-space-xs mt-space-xs bg-surface-container-lowest/15 px-space-sm py-1.5 rounded-lg relative z-10">
+              <span className="font-label-sm text-label-sm text-cyan-400 font-mono">
                 Σ(DR) ≡ Σ(CR)
               </span>
-              <span className="font-label-sm text-label-sm text-on-primary-container font-mono">
+              <span className="font-label-sm text-label-sm text-slate-300 font-mono">
                 VAR: 0.0000
               </span>
             </div>

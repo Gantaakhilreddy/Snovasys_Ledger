@@ -260,7 +260,7 @@ export default function UserManagementPage() {
                 setCreateError(null);
                 setAddModalOpen(true);
               }}
-              className="px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-semibold text-xs transition-all shadow-sm flex items-center gap-2 cursor-pointer"
+              className="px-4 py-2.5 rounded-xl bg-secondary hover:bg-secondary/90 text-white font-semibold text-xs transition-all shadow-xs flex items-center gap-2 cursor-pointer"
             >
               <span className="material-symbols-outlined text-lg">person_add</span>
               <span>Provision New User</span>
@@ -341,17 +341,17 @@ export default function UserManagementPage() {
             </div>
           </div>
 
-          <div className="bg-primary-container text-on-primary p-space-lg rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden">
-            <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container font-semibold">
+          <div className="bg-primary-container text-white p-space-lg rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden border border-white/10">
+            <span className="font-label-sm text-label-sm uppercase tracking-wider text-slate-300 font-semibold">
               System Administrators
             </span>
             <div className="my-space-sm">
-              <span className="font-headline-lg text-headline-lg font-bold text-tertiary-fixed font-mono">
+              <span className="font-headline-lg text-headline-lg font-bold text-cyan-400 font-mono">
                 {adminCount}
               </span>
-              <p className="font-body-sm text-body-sm text-on-primary-container mt-1">Privileged Operations</p>
+              <p className="font-body-sm text-body-sm text-slate-300 mt-1">Privileged Operations</p>
             </div>
-            <div className="pt-2 border-t border-surface-container-lowest/10 text-xs text-on-primary-container font-mono">
+            <div className="pt-2 border-t border-surface-container-lowest/10 text-xs text-slate-400 font-mono">
               FULL PRIVILEGE ROLE
             </div>
           </div>

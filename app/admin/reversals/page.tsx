@@ -291,7 +291,7 @@ export default function ReversalManagementPage() {
                 onClick={() => setStatusFilter('ALL')}
                 className={`px-space-md py-2 rounded-lg font-label-md text-label-md font-semibold transition-colors flex items-center gap-2 whitespace-nowrap ${
                   statusFilter === 'ALL'
-                    ? 'bg-primary-container text-on-primary shadow-xs'
+                    ? 'bg-secondary text-white shadow-xs'
                     : 'bg-surface-container-lowest text-on-surface-variant hover:text-on-surface'
                 }`}
               >
@@ -304,7 +304,7 @@ export default function ReversalManagementPage() {
                 onClick={() => setStatusFilter('COMPLETED')}
                 className={`px-space-md py-2 rounded-lg font-label-md text-label-md font-semibold transition-colors flex items-center gap-2 whitespace-nowrap ${
                   statusFilter === 'COMPLETED'
-                    ? 'bg-primary-container text-on-primary shadow-xs'
+                    ? 'bg-secondary text-white shadow-xs'
                     : 'bg-surface-container-lowest text-on-surface-variant hover:text-on-surface'
                 }`}
               >
@@ -317,7 +317,7 @@ export default function ReversalManagementPage() {
                 onClick={() => setStatusFilter('REVERSED')}
                 className={`px-space-md py-2 rounded-lg font-label-md text-label-md font-semibold transition-colors flex items-center gap-2 whitespace-nowrap ${
                   statusFilter === 'REVERSED'
-                    ? 'bg-primary-container text-on-primary shadow-xs'
+                    ? 'bg-secondary text-white shadow-xs'
                     : 'bg-surface-container-lowest text-on-surface-variant hover:text-on-surface'
                 }`}
               >

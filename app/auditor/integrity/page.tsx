@@ -190,17 +190,17 @@ export default function IntegrityReportsPage() {
 
         {/* Live Multi-Step Verification Flow Animation */}
         {verifying && (
-          <div className="bg-primary-container text-on-primary rounded-2xl p-6 shadow-xl border border-white/10 animate-in fade-in duration-200">
+          <div className="bg-primary-container text-white rounded-2xl p-6 shadow-xl border border-white/10 animate-in fade-in duration-200">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-surface-container-lowest/15 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-tertiary-fixed text-2xl animate-spin">
+                  <span className="material-symbols-outlined text-cyan-400 text-2xl animate-spin">
                     hourglass_top
                   </span>
                 </div>
                 <div>
                   <h3 className="font-bold text-base text-white">Autonomous Integrity Scan in Progress</h3>
-                  <p className="text-xs text-on-primary-container">
+                  <p className="text-xs text-slate-300">
                     Evaluating cryptographic double-entry equations across all accounts and transaction records...
                   </p>
                 </div>

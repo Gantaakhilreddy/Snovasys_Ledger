@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/context/auth-context';
 import { UserRole } from '@/types/auth';
+import { ThemeToggle } from '@/components/theme/theme-toggle';
 
 export default function RegisterPage() {
   const { register } = useAuth();
@@ -66,6 +67,7 @@ export default function RegisterPage() {
             </div>
           </div>
           <div className="flex items-center gap-3 self-end sm:self-center">
+            <ThemeToggle showLabel />
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm border border-surface-container-high text-xs">
               <span className="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
               256-Bit TLS Direct Handshake

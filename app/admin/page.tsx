@@ -606,14 +606,14 @@ export default function AdminDashboardPage() {
             </div>
 
             {/* Immutability Banner */}
-            <div className="bg-primary-container text-on-primary rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+            <div className="bg-primary-container text-white rounded-xl p-space-md shadow-sm flex flex-col gap-2 border border-white/10">
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-tertiary-fixed text-lg">verified_user</span>
-                <span className="font-bold text-xs uppercase tracking-wider text-tertiary-fixed">
+                <span className="material-symbols-outlined text-cyan-400 text-lg">verified_user</span>
+                <span className="font-bold text-xs uppercase tracking-wider text-cyan-400">
                   Double-Entry Certified
                 </span>
               </div>
-              <p className="text-xs text-on-primary-container leading-relaxed">
+              <p className="text-xs text-slate-300 leading-relaxed">
                 Ledger entries are append-only. To correct mistakes, reverse transactions with compensating entries. Direct updates and deletes are blocked at the database engine level.
               </p>
             </div>
