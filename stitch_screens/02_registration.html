@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c6c6cd", "inverse-on-surface": "#eff1f5", "on-surface-variant": "#45474c", "tertiary-fixed-dim": "#4fdbc8", "on-surface": "#181c1f", "tertiary-fixed": "#71f8e4", "inverse-primary": "#bfc6dc", "on-primary-container": "#7c8498", "on-secondary": "#ffffff", "error-container": "#ffdad6", "primary-fixed-dim": "#bfc6dc", "outline": "#76777d", "on-tertiary-fixed": "#00201c", "tertiary": "#000000", "on-secondary-fixed-variant": "#372abf", "surface-dim": "#d8dade", "surface-variant": "#e0e3e6", "on-primary-fixed": "#141b2c", "secondary-container": "#6860ef", "on-background": "#181c1f", "on-tertiary-fixed-variant": "#005048", "tertiary-container": "#00201c", "primary-fixed": "#dbe2f9", "surface-container": "#eceef2", "on-primary": "#ffffff", "on-tertiary-container": "#009485", "on-error": "#ffffff", "on-secondary-container": "#fffbff", "inverse-surface": "#2d3134", "primary": "#000000", "surface-tint": "#565e71", "on-error-container": "#93000a", "surface-bright": "#f7f9fd", "secondary-fixed-dim": "#c3c0ff", "surface": "#f7f9fd", "on-secondary-fixed": "#100069", "surface-container-low": "#f2f4f8", "background": "#f7f9fd", "secondary-fixed": "#e3dfff", "surface-container-high": "#e6e8ec", "surface-container-highest": "#e0e3e6", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "secondary": "#4e45d5", "primary-container": "#141b2c", "on-primary-fixed-variant": "#3f4759" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-lg": "1.5rem", "margin": "2rem", "space-sm": "0.5rem", "gutter-lg": "2rem", "space-xs": "0.25rem", "margin-lg": "3rem", "space-xl": "2.5rem", "gutter-sm": "1rem", "space-md": "1rem", "margin-sm": "1rem" }, "fontFamily": { "body-sm": ["Inter"], "label-md": ["Inter"], "headline-xl": ["Manrope"], "headline-lg": ["Manrope"], "headline-md": ["Manrope"], "headline-sm": ["Manrope"], "headline-lg-mobile": ["Manrope"], "label-lg": ["Inter"], "body-lg": ["Inter"], "headline-xl-mobile": ["Manrope"], "body-md": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-xl": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "fontWeight": "400" }], "headline-xl-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex items-center justify-center"><main class="w-full"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+<!-- Top LedgerLine Header Hub -->
+<header class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-8 gap-4">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-primary-container p-2 flex items-center justify-center shadow-sm">
+<img alt="LedgerLine Institutional Core Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDW16V4BjFcH5l8pR4r2UMs4-6WT7oCHEiYClPmxvzB8FizyvJjapsI-hnI2FBs0vw6Ykw-RrspU2Z9f84ILBgbVV4bIiKZrrciWut-i7gKUaeKuDxeKbdlHhRUQM3WgzRo5VQ19LjvBvYzAE_Gsu1zgsSKmYhMKnElNdIGDFry2XEeVQwAS68vR_cOq4mZgHFW6plUiNkm4YZ5MEjhCjm-_aPW4OV2q1_xKAPQAIK3"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">LedgerLine</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full">Institutional</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">Tier-1 Digital Custody &amp; Settlement Architecture</p>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end sm:self-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+          256-Bit TLS Direct Handshake
+        </span>
+<div class="hidden md:flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+          SOC-2 Type II Certified
+        </div>
+</div>
+</header>
+<!-- Main Workspace Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Primary Registration Funnel (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm p-6 sm:p-10 flex flex-col gap-8">
+<!-- Step Progress Tracker Bar -->
+<div class="w-full">
+<div class="flex items-center justify-between mb-3 text-on-surface">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-semibold">Step 01 / 04</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Estimated: 3 mins</span>
+</div>
+<div class="grid grid-cols-4 gap-2 w-full">
+<div class="h-1.5 bg-secondary-container rounded-full"></div>
+<div class="h-1.5 bg-surface-container-high rounded-full"></div>
+<div class="h-1.5 bg-surface-container-high rounded-full"></div>
+<div class="h-1.5 bg-surface-container-high rounded-full"></div>
+</div>
+<!-- Step Indicators -->
+<div class="grid grid-cols-4 gap-2 mt-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">1. Entity &amp; User</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">In Progress</span>
+</div>
+<div class="flex flex-col opacity-60">
+<span class="font-label-md text-label-md text-on-surface truncate">2. Credentials</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Pending</span>
+</div>
+<div class="flex flex-col opacity-60">
+<span class="font-label-md text-label-md text-on-surface truncate">3. Verification</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">FinCEN / KYC</span>
+</div>
+<div class="flex flex-col opacity-60">
+<span class="font-label-md text-label-md text-on-surface truncate">4. Provisioning</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Sign-off</span>
+</div>
+</div>
+</div>
+<!-- Section Title -->
+<div class="flex flex-col gap-1.5">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">LedgerLine Institutional Onboarding</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Establish legal entity parameters and assign principal account authorization.
+          </p>
+</div>
+<!-- Registration Form Elements -->
+<form class="flex flex-col gap-6" onsubmit="event.preventDefault();">
+<!-- Legal Entity -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="font-label-lg text-label-lg text-on-surface" for="entity-name">Legal Entity / Organization Name</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SEC / FinCEN registered</span>
+</div>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+</div>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all duration-150" id="entity-name" type="text" value="Apex Holdings LLC"/>
+</div>
+</div>
+<!-- Dual Column: Full Name & Corporate Email -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Full Name -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface" for="full-name">Authorized Officer Name</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all duration-150" id="full-name" type="text" value="Elena Rostova"/>
+</div>
+</div>
+<!-- Corporate Email -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface" for="corp-email">Corporate Email Address</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</div>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all duration-150" id="corp-email" type="email" value="elena.rostova@apexledger.io"/>
+</div>
+</div>
+</div>
+<!-- Direct Phone Number with Flag Selector -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface" for="phone-number">Direct Phone Number (Secure 2FA Root)</label>
+<div class="flex gap-2">
+<!-- Country Prefix Selector Button -->
+<div class="flex items-center gap-2 px-3 py-2.5 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md select-none">
+<svg class="w-5 h-3.5 rounded-sm object-cover" viewbox="0 0 640 480">
+<path d="M0 0h640v480H0z" fill="#bd3d44"></path>
+<path d="M0 55h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640" stroke="#fff" stroke-width="37"></path>
+<path d="M0 0h256v258H0z" fill="#192f5d"></path>
+<circle cx="128" cy="129" fill="#fff" r="64"></circle>
+</svg>
+<span class="font-medium text-on-surface">+1</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
+</div>
+<div class="relative flex-1">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</div>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all duration-150" id="phone-number" type="tel" value="+1 (555) 382-9104"/>
+</div>
+</div>
+</div>
+<!-- Master Passwords Section -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface" for="master-password">Master Password</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">key</span>
+</div>
+<input class="w-full pl-10 pr-10 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all duration-150" id="master-password" type="password" value="ApexVault!2024Secure"/>
+<button class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-on-surface-variant hover:text-on-surface" onclick="togglePasswordVisibility('master-password', this)" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface" for="confirm-password">Confirm Master Password</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<input class="w-full pl-10 pr-10 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all duration-150" id="confirm-password" type="password" value="ApexVault!2024Secure"/>
+<button class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-on-surface-variant hover:text-on-surface" onclick="togglePasswordVisibility('confirm-password', this)" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Password Strength Interactive Indicator -->
+<div class="p-4 bg-surface-container-low rounded-lg flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Institutional Entropy Threshold</span>
+<span class="font-label-md text-label-md text-on-secondary-fixed-variant font-semibold">Tier-4 Strong (98/100)</span>
+</div>
+<!-- Meter Bars -->
+<div class="grid grid-cols-4 gap-1.5 h-1.5">
+<div class="bg-secondary-container rounded-full h-full"></div>
+<div class="bg-secondary-container rounded-full h-full"></div>
+<div class="bg-secondary-container rounded-full h-full"></div>
+<div class="bg-secondary-container rounded-full h-full"></div>
+</div>
+<!-- Dynamic Criteria Pills -->
+<div class="flex flex-wrap gap-2 pt-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span>
+                12+ Characters
+              </div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span>
+                Uppercase &amp; Lowercase
+              </div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span>
+                Special Symbol (!@#$)
+              </div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span>
+                Numeric String
+              </div>
+</div>
+</div>
+<!-- Terms and FinCEN Compliance Checkbox -->
+<div class="flex items-start gap-3 p-1">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary-container focus:ring-0 cursor-pointer" id="compliance-checkbox" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer select-none leading-relaxed" for="compliance-checkbox">
+              I accept the <a class="text-secondary font-medium hover:underline" href="#">Master Institutional Services Agreement</a> and acknowledge automated verification through <a class="text-secondary font-medium hover:underline" href="#">FinCEN Regulatory Frameworks</a> and OFAC screening protocols.
+            </label>
+</div>
+<!-- Action CTA -->
+<div class="flex flex-col gap-3 pt-2">
+<button class="w-full py-3.5 px-6 rounded-lg bg-primary-container text-on-primary font-headline-sm text-label-lg flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all duration-200 active:scale-[0.99]" type="submit">
+<span>Create Institution Account &amp; Proceed to Verification</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-1.5 text-center font-label-md text-label-md text-on-surface-variant pt-2">
+<span>Already have an authorized corporate profile?</span>
+<a class="font-medium text-secondary hover:underline" href="#">Sign In</a>
+</div>
+</div>
+</form>
+</div>
+<!-- Right Column: Security Verification & Trust Infrastructure (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Institutional Confidence Card -->
+<div class="bg-primary-container text-on-primary rounded-xl p-6 sm:p-8 shadow-md flex flex-col gap-6 relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-44 h-44 rounded-full bg-secondary-container opacity-10 pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed animate-ping"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-tertiary-fixed font-semibold">LedgerLine Network Authority</span>
+</div>
+<span class="material-symbols-outlined text-[22px] text-tertiary-fixed">verified_user</span>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-lg text-headline-lg font-bold tracking-tight text-on-primary">$18B+</h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim">
+              Securing over $18B+ in audited assets daily across 42 jurisdictions with segregated multi-party computational vaults.
+            </p>
+</div>
+<!-- Live Network Metric Grid -->
+<div class="grid grid-cols-2 gap-4 pt-2">
+<div class="bg-surface-container-highest/10 rounded-lg p-3">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider block">Latency Engine</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-primary">&lt;14ms</span>
+</div>
+<div class="bg-surface-container-highest/10 rounded-lg p-3">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider block">Global Nodes</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-primary">128 Active</span>
+</div>
+</div>
+<!-- Inline SVG Node Ledger Visualization -->
+<div class="w-full bg-surface-container-highest/10 rounded-lg p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between text-primary-fixed-dim font-label-sm text-label-sm">
+<span>Cryptographic Proof Verification</span>
+<span>Block #19,842,019</span>
+</div>
+<svg class="w-full h-12 text-tertiary-fixed" fill="none" viewbox="0 0 320 48">
+<path d="M0 24 Q 40 8, 80 24 T 160 24 T 240 24 T 320 24" stroke="currentColor" stroke-dasharray="4 2" stroke-width="2"></path>
+<circle cx="40" cy="18" fill="currentColor" r="4"></circle>
+<circle cx="120" cy="30" fill="currentColor" r="4"></circle>
+<circle cx="200" cy="18" fill="currentColor" r="4"></circle>
+<circle cx="280" cy="30" fill="currentColor" r="4"></circle>
+</svg>
+</div>
+</div>
+<!-- Compliance & Regulatory Partner Badges -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col gap-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-medium">Standard Audits &amp; Compliances</span>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-secondary">shield</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">SOC 2 Type II</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Annual Attestation</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-secondary">assured_workload</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">FinCEN MSB</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tier-1 Registered</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-secondary">encrypted</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">ISO 27001</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Security Enforced</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-secondary">gavel</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">MiCA Compliant</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">EU Operations</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Global Enterprise Custody Preview Card with Placeholder Image -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="h-36 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Modern architectural financial operations center with ambient midnight blue lighting, high-resolution curved analytics monitors displaying institutional trading telemetry, pristine minimalist interior with clean lines and sharp glass surfaces, photorealistic executive finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdk7HGSmtSQ0iBUB6NL_Zgjb2StV_y0ojCxJTvB4jlv12Nkig1eTgyEXjn9MWfYI7FLibYoVi0yn_mQOxVToHzzQRgL4XZa3NMV6Po3KhftZ-Sux3NS8DOJ9q6c9Hj2Dek7U5_WXGd-7i2tLG-4rt86ZREZ_rsv6NCTHWjIYCfv7pgmqFFCbWHbx8K2t24XRutqTFAQAHkbijiId75B35LPteUkdggd4hLMjn8Ycs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4">
+<span class="font-label-md text-label-md text-on-secondary font-semibold">Cold Storage Facility: Zurich Vault Delta</span>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">hub</span>
+<span class="font-label-md text-label-md text-on-surface">HSM FIPS 140-3 Level 4</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Operational</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Onboarding Step Preview Footer -->
+<div class="mt-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-6">
+<span>© 2025 LedgerLine Technologies Inc.</span>
+<a class="hover:text-on-surface" href="#">Global Privacy Policy</a>
+<a class="hover:text-on-surface" href="#">API Documentation</a>
+<a class="hover:text-on-surface" href="#">System Status</a>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+<span>Institutional Session TTL: 14:59</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function togglePasswordVisibility(fieldId, btnElement) {
+    const input = document.getElementById(fieldId);
+    if (!input) return;
+    const icon = btnElement.querySelector('.material-symbols-outlined');
+    if (input.type === 'password') {
+      input.type = 'text';
+      if (icon) icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      if (icon) icon.textContent = 'visibility';
+    }
+  }
+</script></main></body></html>

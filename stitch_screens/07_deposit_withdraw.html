@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c6c6cd", "inverse-on-surface": "#eff1f5", "on-surface-variant": "#45474c", "tertiary-fixed-dim": "#4fdbc8", "on-surface": "#181c1f", "tertiary-fixed": "#71f8e4", "inverse-primary": "#bfc6dc", "on-primary-container": "#7c8498", "on-secondary": "#ffffff", "error-container": "#ffdad6", "primary-fixed-dim": "#bfc6dc", "outline": "#76777d", "on-tertiary-fixed": "#00201c", "tertiary": "#000000", "on-secondary-fixed-variant": "#372abf", "surface-dim": "#d8dade", "surface-variant": "#e0e3e6", "on-primary-fixed": "#141b2c", "secondary-container": "#6860ef", "on-background": "#181c1f", "on-tertiary-fixed-variant": "#005048", "tertiary-container": "#00201c", "primary-fixed": "#dbe2f9", "surface-container": "#eceef2", "on-primary": "#ffffff", "on-tertiary-container": "#009485", "on-error": "#ffffff", "on-secondary-container": "#fffbff", "inverse-surface": "#2d3134", "primary": "#000000", "surface-tint": "#565e71", "on-error-container": "#93000a", "surface-bright": "#f7f9fd", "secondary-fixed-dim": "#c3c0ff", "surface": "#f7f9fd", "on-secondary-fixed": "#100069", "surface-container-low": "#f2f4f8", "background": "#f7f9fd", "secondary-fixed": "#e3dfff", "surface-container-high": "#e6e8ec", "surface-container-highest": "#e0e3e6", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "secondary": "#4e45d5", "primary-container": "#141b2c", "on-primary-fixed-variant": "#3f4759" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-lg": "1.5rem", "margin": "2rem", "space-sm": "0.5rem", "gutter-lg": "2rem", "space-xs": "0.25rem", "margin-lg": "3rem", "space-xl": "2.5rem", "gutter-sm": "1rem", "space-md": "1rem", "margin-sm": "1rem" }, "fontFamily": { "body-sm": ["Inter"], "label-md": ["Inter"], "headline-xl": ["Manrope"], "headline-lg": ["Manrope"], "headline-md": ["Manrope"], "headline-sm": ["Manrope"], "headline-lg-mobile": ["Manrope"], "label-lg": ["Inter"], "body-lg": ["Inter"], "headline-xl-mobile": ["Manrope"], "body-md": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-xl": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "fontWeight": "400" }], "headline-xl-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><img alt="LedgerLine Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDW16V4BjFcH5l8pR4r2UMs4-6WT7oCHEiYClPmxvzB8FizyvJjapsI-hnI2FBs0vw6Ykw-RrspU2Z9f84ILBgbVV4bIiKZrrciWut-i7gKUaeKuDxeKbdlHhRUQM3WgzRo5VQ19LjvBvYzAE_Gsu1zgsSKmYhMKnElNdIGDFry2XEeVQwAS68vR_cOq4mZgHFW6plUiNkm4YZ5MEjhCjm-_aPW4OV2q1_xKAPQAIK3"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight font-bold">LedgerLine</span><span class="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase">FINANCIAL OS</span></div></div><p class="font-label-sm text-label-sm text-on-primary-container pl-1 pt-1">Every Transaction. Accounted For.</p></div><div class="px-space-md py-space-sm"><div class="bg-surface-container-lowest/5 rounded-xl p-space-xs"><label class="block font-label-sm text-label-sm text-on-primary-container px-space-xs mb-1 uppercase">Operating Role</label><div class="relative"><select class="w-full bg-surface-container-lowest/10 text-on-primary font-label-md text-label-md rounded-lg py-2 pl-3 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-tertiary-fixed cursor-pointer"><option class="bg-primary-container text-on-primary" value="holder">Account Holder (Executive)</option><option class="bg-primary-container text-on-primary" value="admin">System Administrator</option><option class="bg-primary-container text-on-primary" value="auditor">Compliance Auditor</option></select><span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-primary-container pointer-events-none text-base">unfold_more</span></div></div></div><nav class="px-space-md py-space-xs flex flex-col gap-space-md" data-active-classes="bg-surface-container-lowest/15 text-on-primary font-semibold"><div class="flex flex-col gap-1"><div class="px-space-xs py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider font-semibold">Personal Banking</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="user-dashboard" href="#"><span class="material-symbols-outlined text-lg">dashboard</span>User Dashboard</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="my-accounts" href="#"><span class="material-symbols-outlined text-lg">account_balance</span>My Accounts</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="transfer-money" href="#"><span class="material-symbols-outlined text-lg">sync_alt</span>Transfer Money</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="deposit-withdraw" href="#"><span class="material-symbols-outlined text-lg">payments</span>Deposit &amp; Withdraw</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="transaction-history" href="#"><span class="material-symbols-outlined text-lg">receipt_long</span>Transaction History</a></div><div class="flex flex-col gap-1"><div class="px-space-xs py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider font-semibold">Administrative Control</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-lg">admin_panel_settings</span>Admin Dashboard</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="user-management" href="#"><span class="material-symbols-outlined text-lg">group</span>User Management</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="account-management" href="#"><span class="material-symbols-outlined text-lg">badge</span>Account Management</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="transaction-management" href="#"><span class="material-symbols-outlined text-lg">rule</span>Transaction Management</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="reversal-management" href="#"><span class="material-symbols-outlined text-lg">undo</span>Reversal Management</a></div><div class="flex flex-col gap-1"><div class="px-space-xs py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider font-semibold">Compliance &amp; Audit</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="auditor-dashboard" href="#"><span class="material-symbols-outlined text-lg">verified_user</span>Auditor Dashboard</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-lg">history_edu</span>Audit Logs</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="integrity-reports" href="#"><span class="material-symbols-outlined text-lg">assessment</span>Integrity Reports</a></div><div class="flex flex-col gap-1"><div class="px-space-xs py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider font-semibold">Security</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="security-alerts" href="#"><span class="material-symbols-outlined text-lg">shield</span>Security Alerts &amp; Anomalies</a></div></nav></div><div class="p-space-md"><div class="bg-surface-container-lowest/5 rounded-xl p-space-sm flex items-center justify-between"><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></div><span class="font-label-sm text-label-sm text-on-primary-container">Ledger Immutable</span></div><span class="font-label-sm text-label-sm text-tertiary-fixed-dim font-mono">v4.19</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-10 pr-4 py-2 rounded-lg border-0 focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-outline" placeholder="Search transactions, accounts, rules... (Press ⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">AES-256 Validated</span><span class="text-outline-variant">•</span><span class="font-label-sm text-label-sm text-on-surface-variant">99.99% Uptime</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full ring-2 ring-surface"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-xs cursor-pointer group"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-secondary transition-colors">Elena Rostova</span><span class="font-label-sm text-label-sm text-on-surface-variant">VP Finance</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcIh79Ofe4nSPKICQLcR-mg1zizf3-0GVsFbi9P9JNIOHNj1hWQg_QotMWnRVMm2a6TxocAN5TOPVTKrEnSOnjU_ZRjE-f4DjWBXPkyI87hwf8f_Wj-8rRKQCLswslcRxJmeds_m2iLQSKL8vWzO0sa-zqDg8R4BzsSGrmnwmRVgGYtOD2Lffvp6wTuTOezFr39KDxVobcK48S5Tk4TOGCZMmCXizgs0-JdCFDF6M"/><span class="material-symbols-outlined text-on-surface-variant text-base hidden sm:block">expand_more</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-gutter-lg py-space-lg w-full"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Operational Banner & Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider font-semibold">Treasury Ops Level 4</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• Settlement Window Closes in 02h 44m</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">Deposit &amp; Withdraw Capital</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Manage external institutional funding sources, programmatic ACH pull/push liquidity, treasury yield sweeps, and corporate wire dispatches.</p>
+</div>
+<!-- Quick Liquidity Gauge Widget -->
+<div class="flex items-center gap-space-md bg-surface-container-lowest p-space-sm px-space-md rounded-xl shadow-sm">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Unencumbered Balance</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">$4,829,350.42</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+</div>
+</div>
+</div>
+<!-- Mode Selector Segmented Tabs -->
+<div class="flex p-1 bg-surface-container-low rounded-xl max-w-xl shadow-sm self-start">
+<button class="flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg font-semibold shadow-sm transition-all duration-150" id="tab-deposit" onclick="switchMode('deposit')">
+<span class="material-symbols-outlined text-lg text-secondary">arrow_downward</span>
+      Deposit Funds (Inbound Liquidity)
+    </button>
+<button class="flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg font-medium transition-all duration-150" id="tab-withdraw" onclick="switchMode('withdraw')">
+<span class="material-symbols-outlined text-lg">arrow_upward</span>
+      Withdraw Funds (Outbound Capital)
+    </button>
+</div>
+<!-- DEPOSIT VIEW CONTAINER -->
+<div class="flex flex-col gap-space-lg" id="deposit-view">
+<!-- Bento Grid for Deposit Stream -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Inbound Instructions Card (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl">account_tree</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Institutional Wiring Directives</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Use these sovereign identifiers for inbound Fedwire, SWIFT, and domestic ACH sweeps directly into your primary operating vault.</p>
+</div>
+<span class="self-start sm:self-auto px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              Real-time Ingestion Active
+            </span>
+</div>
+<!-- Directive Parameter Badges / Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-space-md pt-2">
+<!-- Beneficiary Name -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Beneficiary Name</span>
+<button class="text-on-surface-variant hover:text-secondary p-1 rounded transition-colors" onclick="copyToClipboard('LedgerLine FBO Elena Rostova Exec Corp', this)" title="Copy">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate pt-1">Elena Rostova Exec Corp</span>
+</div>
+<!-- Receiving Institution -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Receiving Bank</span>
+<button class="text-on-surface-variant hover:text-secondary p-1 rounded transition-colors" onclick="copyToClipboard('Evolve Bank &amp; Trust / LedgerLine Custody', this)" title="Copy">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate pt-1">Evolve Bank &amp; Trust</span>
+</div>
+<!-- ABA Routing Number -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Routing Number (ABA)</span>
+<button class="text-on-surface-variant hover:text-secondary p-1 rounded transition-colors" onclick="copyToClipboard('084108849', this)" title="Copy">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-mono font-semibold pt-1">084108849</span>
+</div>
+<!-- Virtual Account Number -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Virtual Vault Account</span>
+<button class="text-on-surface-variant hover:text-secondary p-1 rounded transition-colors" onclick="copyToClipboard('904481920042', this)" title="Copy">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-mono font-semibold pt-1">9044-8192-0042</span>
+</div>
+<!-- SWIFT / BIC -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">SWIFT / BIC Code</span>
+<button class="text-on-surface-variant hover:text-secondary p-1 rounded transition-colors" onclick="copyToClipboard('EVLVUS44XXX', this)" title="Copy">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-mono font-semibold pt-1">EVLVUS44XXX</span>
+</div>
+<!-- Reference Memo Code -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Unique Memo/Ref</span>
+<button class="text-on-surface-variant hover:text-secondary p-1 rounded transition-colors" onclick="copyToClipboard('LDG-OPS-8819', this)" title="Copy">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+<span class="font-label-md text-label-md text-secondary font-mono font-bold pt-1">LDG-OPS-8819</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-high/40 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-base">info</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fedwire settlements initiated before 5:00 PM EST post within 15 minutes. ACH settlements settle next morning.</span>
+</div>
+<button class="font-label-sm text-label-sm font-semibold text-secondary hover:underline flex items-center gap-1">
+            Download PDF Directives
+            <span class="material-symbols-outlined text-xs">download</span>
+</button>
+</div>
+</div>
+<!-- Quick ACH Inbound Pull Card (4 Cols) -->
+<div class="lg:col-span-4 bg-primary-container text-on-primary rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-xl">bolt</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-primary">ACH Inbound Pull</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/10 text-tertiary-fixed font-label-sm text-label-sm uppercase font-mono">Direct RTP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container">Initiate instant or same-day debit against your connected corporate institutional liquidity pools.</p>
+<!-- Input Fields for ACH Pull -->
+<div class="flex flex-col gap-3 mt-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-primary-container uppercase font-semibold">Select Funding Source</label>
+<select class="w-full bg-surface-container-lowest/10 text-on-primary font-label-md text-label-md rounded-lg py-2 pl-3 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-tertiary-fixed cursor-pointer" id="pull-source">
+<option class="bg-primary-container text-on-primary" value="chase">JPMorgan Chase Institutional (•••• 1092)</option>
+<option class="bg-primary-container text-on-primary" value="svb">Silicon Valley Bank Sweep (•••• 9811)</option>
+<option class="bg-primary-container text-on-primary" value="bofa">Bank of America Depository (•••• 3301)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm text-on-primary-container uppercase font-semibold">Transfer Amount</label>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim">Max Daily: $2,500,000</span>
+</div>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-primary-container font-headline-sm">$</span>
+<input class="w-full bg-surface-container-lowest/10 text-on-primary font-headline-sm text-headline-sm pl-8 pr-4 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-tertiary-fixed font-mono" id="pull-amount" type="text" value="250,000.00"/>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-primary-container font-body-sm text-body-sm">
+<span>Estimated Clearing</span>
+<span class="text-on-primary font-medium">Instant / 60 Seconds (FedNow)</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-md py-3 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 hover:bg-tertiary-fixed-dim transition-all shadow-md" onclick="triggerPullModal()">
+<span>Authorize Inbound Pull</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Linked Institutional Source List -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Connected Treasury Counterparties</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validated Plaid &amp; FedACH linked institutions permitted for automated liquidity routing.</p>
+</div>
+<button class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center gap-2 self-start sm:self-auto">
+<span class="material-symbols-outlined text-base">add_link</span>
+          Connect New Institution
+        </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Account Card 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center font-bold text-on-surface shadow-sm">
+                JPM
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">JPMorgan Chase</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Institutional Master •••• 1092</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+<div class="flex items-end justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Available at Source</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono">$12,480,210.00</span>
+</div>
+<button class="text-secondary font-label-sm text-label-sm font-semibold hover:underline" onclick="quickSelectSource('JPMorgan Chase', '1092')">Select Source</button>
+</div>
+</div>
+<!-- Account Card 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center font-bold text-on-surface shadow-sm">
+                SVB
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Silicon Valley Bank</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sweep Operating •••• 9811</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+<div class="flex items-end justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Available at Source</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono">$3,150,000.00</span>
+</div>
+<button class="text-secondary font-label-sm text-label-sm font-semibold hover:underline" onclick="quickSelectSource('Silicon Valley Bank', '9811')">Select Source</button>
+</div>
+</div>
+<!-- Account Card 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center font-bold text-on-surface shadow-sm">
+                BOA
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Bank of America</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Treasury Depository •••• 3301</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+<div class="flex items-end justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Available at Source</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono">$8,940,000.00</span>
+</div>
+<button class="text-secondary font-label-sm text-label-sm font-semibold hover:underline" onclick="quickSelectSource('Bank of America', '3301')">Select Source</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- WITHDRAW VIEW CONTAINER (Hidden by default, toggled via JS) -->
+<div class="hidden flex flex-col gap-space-lg" id="withdraw-view">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Withdrawal Execution Panel (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl">payments</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Capital Dispersal &amp; Outbound Wire</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Remit capital from unencumbered primary liquidity to verified external institutional destinations.</p>
+</div>
+<!-- Form Elements -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Destination Picker -->
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Destination Counterparty Account</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg py-3 pl-3 pr-10 appearance-none focus:outline-none focus:ring-2 focus:ring-secondary cursor-pointer">
+<option>JPMorgan Chase Institutional Master (•••• 1092) - Domestic Fedwire</option>
+<option>Silicon Valley Bank Sweep (•••• 9811) - ACH Same-Day</option>
+<option>Bank of America Depository (•••• 3301) - Fedwire / RTP</option>
+<option>Credit Suisse Zurich Trust Escrow (•••• 0192) - International SWIFT</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">unfold_more</span>
+</div>
+</div>
+<!-- Dispersal Amount Input -->
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Dispersal Amount</label>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Unencumbered Balance: <strong class="text-on-surface font-mono">$4,829,350.42</strong></span>
+<button class="px-2 py-0.5 text-xs font-semibold rounded bg-surface-container-high text-secondary hover:bg-secondary hover:text-on-secondary transition-colors" onclick="setFullBalance()">Max</button>
+</div>
+</div>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-headline-md">$</span>
+<input class="w-full bg-surface-container-low text-on-surface font-headline-md text-headline-md pl-10 pr-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary font-mono" id="withdraw-amount-input" placeholder="0.00" type="text" value="500,000.00"/>
+</div>
+</div>
+<!-- Speed / Settlement Tier Selection -->
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Settlement Velocity</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<label class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-1 cursor-pointer hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<input class="text-secondary focus:ring-0" name="speed" type="radio" value="standard"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">$0.00 Fee</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Standard ACH</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">T+1 Business Day (Next Morning)</span>
+</label>
+<label class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-1 cursor-pointer hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<input checked="" class="text-secondary focus:ring-0" name="speed" type="radio" value="fedwire"/>
+<span class="font-label-sm text-label-sm text-secondary font-mono">$15.00 Priority</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Fedwire Outbound</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Immediate / Under 15 Minutes</span>
+</label>
+<label class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-1 cursor-pointer hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<input class="text-secondary focus:ring-0" name="speed" type="radio" value="sweep"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Automated</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Treasury Sweep</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Post 4:30 PM Batch Window</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Compliance & Dual-Signoff Guardrail Box -->
+<div class="p-space-md rounded-xl bg-amber-50 flex items-start gap-space-md">
+<span class="material-symbols-outlined text-amber-700 text-2xl mt-0.5">verified_user</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold text-amber-900 uppercase tracking-wide">Dual-Signoff Protocol Enforced</span>
+<p class="font-body-sm text-body-sm text-amber-900/80">Dispersals exceeding $250,000 require secondary cryptographic key signoff from a designated Institutional Co-Trustee. A push notification with 2FA authorization token will be dispatched upon initiation.</p>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-md pt-space-xs">
+<button class="px-5 py-2.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-colors">Cancel</button>
+<button class="px-8 py-3 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center gap-2 hover:bg-on-surface transition-all shadow-md" onclick="triggerDispersalFlow()">
+<span class="material-symbols-outlined text-lg">send</span>
+            Execute Dispersal Request
+          </button>
+</div>
+</div>
+<!-- Dispersal Summary Card (4 Cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Policy &amp; Limits Overview</h3>
+<div class="flex flex-col gap-space-sm divide-y divide-surface-container">
+<div class="flex justify-between items-center py-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Daily Dispersal Ceiling</span>
+<span class="font-label-md text-label-md font-mono font-bold text-on-surface">$10,000,000.00</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Utilized Today</span>
+<span class="font-label-md text-label-md font-mono text-on-surface">$1,250,000.00 (12.5%)</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Remaining Daily Allocation</span>
+<span class="font-label-md text-label-md font-mono font-semibold text-emerald-600">$8,750,000.00</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Federal Cutoff Time</span>
+<span class="font-label-md text-label-md font-mono text-on-surface">17:00:00 EST</span>
+</div>
+</div>
+<!-- Progress Bar Representation -->
+<div class="flex flex-col gap-1.5 mt-2">
+<div class="flex justify-between text-xs text-on-surface-variant">
+<span>Limit Consumption</span>
+<span>12.5%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 12.5%;"></div>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-xl">format_image_left</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">All wire orders are audited against OFAC SDN and FinCEN screening modules in sub-second flight.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Automated Liquidity Sweeps Configuration Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-xl">autorenew</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Programmatic Treasury Sweep Rules</h2>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Active Rule #01</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automatically move excess operational capital into high-yield short-term UST reserve vehicles to prevent idle drag.</p>
+</div>
+</div>
+<!-- Main Rule Master Toggle -->
+<div class="flex items-center gap-3 self-end lg:self-center">
+<span class="font-label-md text-label-md text-on-surface font-medium">Daily Sweep Execution</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="sweep-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+<!-- Sweep Parameters Bento Section -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-2">
+<!-- Parameter 1: Threshold Slider Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Operating Target Threshold</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono" id="slider-display">$1,500,000</span>
+</div>
+<div class="flex flex-col gap-2">
+<input class="w-full accent-secondary cursor-pointer" id="sweep-slider" max="5000000" min="500000" oninput="updateSweepDisplay(this.value)" step="100000" type="range" value="1500000"/>
+<div class="flex justify-between text-xs text-on-surface-variant font-mono">
+<span>$500K</span>
+<span>$2.5M</span>
+<span>$5.0M</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Amounts above this limit trigger outbound sweeps daily at 4:30 PM EST.</span>
+</div>
+<!-- Parameter 2: Sweep Destination -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Sweep Target Reserve</span>
+<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold font-mono">5.12% APY</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Strategic Treasury Custody</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">BlackRock FedFund Institutional (TFDXX)</span>
+</div>
+<div class="flex items-center justify-between text-xs text-on-surface-variant">
+<span>Auto-Rebalance Back</span>
+<span class="text-on-surface font-medium font-mono">Enabled (Floor: $800k)</span>
+</div>
+</div>
+<!-- Parameter 3: Yield Accrual Projection -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">30-Day Estimated Yield</span>
+<span class="material-symbols-outlined text-secondary text-base">trending_up</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono">+$14,198.42</span>
+<span class="font-body-sm text-body-sm text-emerald-600 font-medium">Compounded Daily • Direct Deposit</span>
+</div>
+<div class="flex items-center justify-between text-xs text-on-surface-variant">
+<span>Next Scheduled Sweep</span>
+<span class="text-on-surface font-medium font-mono">Today, 16:30 EST</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Deposit & Withdrawal Audit History Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Liquidity Movement Audit Log</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cryptographically signed ledger record of inbound replenishments and outbound dispersals.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">filter_list</span>
+          Filter Type
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">file_download</span>
+          Export Ledger
+        </button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">
+<tr>
+<th class="py-3 px-space-lg font-medium">Type &amp; Identifier</th>
+<th class="py-3 px-space-md font-medium">Counterparty Source / Destination</th>
+<th class="py-3 px-space-md font-medium text-right">Amount</th>
+<th class="py-3 px-space-md font-medium">Settlement Status</th>
+<th class="py-3 px-space-md font-medium">Timestamp</th>
+<th class="py-3 px-space-lg font-medium text-right">Documentation</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm">arrow_downward</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">ACH Inbound Pull</span>
+<span class="font-mono text-xs text-on-surface-variant">TX-9902-8172</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-medium">JPMorgan Chase Institutional (•••• 1092)</span>
+</td>
+<td class="py-4 px-space-md text-right font-mono font-bold text-emerald-700">
+              +$750,000.00
+            </td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Settled (FedNow)
+              </span>
+</td>
+<td class="py-4 px-space-md font-mono text-on-surface-variant">
+              Today, 11:24 AM EST
+            </td>
+<td class="py-4 px-space-lg text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="downloadReceipt('TX-9902-8172')" title="Download Wire Confirmation">
+<span class="material-symbols-outlined text-lg">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm">sync_alt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Auto-Sweep Outbound</span>
+<span class="font-mono text-xs text-on-surface-variant">SWP-4819-2099</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-medium">Strategic Treasury Yield Fund (TFDXX)</span>
+</td>
+<td class="py-4 px-space-md text-right font-mono font-bold text-on-surface">
+              -$420,000.00
+            </td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                Yield Sweep Active
+              </span>
+</td>
+<td class="py-4 px-space-md font-mono text-on-surface-variant">
+              Yesterday, 4:30 PM EST
+            </td>
+<td class="py-4 px-space-lg text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="downloadReceipt('SWP-4819-2099')" title="Download Confirmation">
+<span class="material-symbols-outlined text-lg">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-red-100 text-red-800 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Fedwire Outbound</span>
+<span class="font-mono text-xs text-on-surface-variant">FW-8812-0041</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-medium">Silicon Valley Bank (•••• 9811)</span>
+</td>
+<td class="py-4 px-space-md text-right font-mono font-bold text-on-surface">
+              -$1,250,000.00
+            </td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Fedwire Cleared
+              </span>
+</td>
+<td class="py-4 px-space-md font-mono text-on-surface-variant">
+              Oct 24, 2024 2:15 PM EST
+            </td>
+<td class="py-4 px-space-lg text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="downloadReceipt('FW-8812-0041')" title="Download Wire Confirmation">
+<span class="material-symbols-outlined text-lg">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm">arrow_downward</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Fedwire Inbound</span>
+<span class="font-mono text-xs text-on-surface-variant">FW-7719-3301</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-medium">Citigroup Institutional Escrow (•••• 4001)</span>
+</td>
+<td class="py-4 px-space-md text-right font-mono font-bold text-emerald-700">
+              +$2,000,000.00
+            </td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Settled (Fedwire)
+              </span>
+</td>
+<td class="py-4 px-space-md font-mono text-on-surface-variant">
+              Oct 22, 2024 10:04 AM EST
+            </td>
+<td class="py-4 px-space-lg text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="downloadReceipt('FW-7719-3301')" title="Download Wire Confirmation">
+<span class="material-symbols-outlined text-lg">receipt</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination Metadata -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between text-xs text-on-surface-variant">
+<span>Showing 4 of 48 Treasury Movements</span>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high font-medium text-on-surface">Previous</button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high font-medium text-on-surface">Next</button>
+</div>
+</div>
+</div>
+<!-- Interactive Toast Notification container (Dynamically triggered) -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toast-container"></div>
+</div>
+<script>
+  function switchMode(mode) {
+    const depositTab = document.getElementById('tab-deposit');
+    const withdrawTab = document.getElementById('tab-withdraw');
+    const depositView = document.getElementById('deposit-view');
+    const withdrawView = document.getElementById('withdraw-view');
+
+    if (mode === 'deposit') {
+      depositView.classList.remove('hidden');
+      withdrawView.classList.add('hidden');
+
+      depositTab.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      depositTab.classList.remove('text-on-surface-variant');
+
+      withdrawTab.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      withdrawTab.classList.add('text-on-surface-variant');
+    } else {
+      depositView.classList.add('hidden');
+      withdrawView.classList.remove('hidden');
+
+      withdrawTab.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      withdrawTab.classList.remove('text-on-surface-variant');
+
+      depositTab.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      depositTab.classList.add('text-on-surface-variant');
+    }
+  }
+
+  function copyToClipboard(text, btnElement) {
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('Copied to clipboard: ' + text);
+      const icon = btnElement.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.innerText = 'check';
+        setTimeout(() => {
+          icon.innerText = 'content_copy';
+        }, 1500);
+      }
+    });
+  }
+
+  function quickSelectSource(bankName, last4) {
+    const pullSource = document.getElementById('pull-source');
+    if (pullSource) {
+      if (last4 === '1092') pullSource.value = 'chase';
+      else if (last4 === '9811') pullSource.value = 'svb';
+      else if (last4 === '3301') pullSource.value = 'bofa';
+      showToast('Selected ' + bankName + ' (•••• ' + last4 + ') as funding source');
+    }
+  }
+
+  function updateSweepDisplay(val) {
+    const formatted = '$' + Number(val).toLocaleString();
+    document.getElementById('slider-display').innerText = formatted;
+  }
+
+  function setFullBalance() {
+    document.getElementById('withdraw-amount-input').value = '4,829,350.42';
+    showToast('Dispersal amount set to maximum unencumbered liquidity');
+  }
+
+  function triggerPullModal() {
+    const amt = document.getElementById('pull-amount').value;
+    const sourceEl = document.getElementById('pull-source');
+    const sourceText = sourceEl.options[sourceEl.selectedIndex].text;
+    showToast('Inbound pull of $' + amt + ' initiated from ' + sourceText);
+  }
+
+  function triggerDispersalFlow() {
+    const amt = document.getElementById('withdraw-amount-input').value;
+    showToast('Dual-Signoff push notification dispatched for withdrawal of $' + amt);
+  }
+
+  function downloadReceipt(txId) {
+    showToast('Generating official wire certification receipt for ' + txId + '...');
+  }
+
+  function showToast(message) {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = 'pointer-events-auto flex items-center gap-2 bg-primary-container text-on-primary px-4 py-3 rounded-lg shadow-xl font-label-md text-label-md transform transition-all duration-300 translate-y-2 opacity-0';
+    toast.innerHTML = '<span class="material-symbols-outlined text-secondary text-base">check_circle</span><span>' + message + '</span>';
+    
+    container.appendChild(toast);
+    
+    requestAnimationFrame(() => {
+      toast.classList.remove('translate-y-2', 'opacity-0');
+    });
+
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'translate-y-2');
+      setTimeout(() => {
+        toast.remove();
+      }, 300);
+    }, 3200);
+  }
+</script></main></div></body></html>

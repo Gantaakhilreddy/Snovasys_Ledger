@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c6c6cd", "inverse-on-surface": "#eff1f5", "on-surface-variant": "#45474c", "tertiary-fixed-dim": "#4fdbc8", "on-surface": "#181c1f", "tertiary-fixed": "#71f8e4", "inverse-primary": "#bfc6dc", "on-primary-container": "#7c8498", "on-secondary": "#ffffff", "error-container": "#ffdad6", "primary-fixed-dim": "#bfc6dc", "outline": "#76777d", "on-tertiary-fixed": "#00201c", "tertiary": "#000000", "on-secondary-fixed-variant": "#372abf", "surface-dim": "#d8dade", "surface-variant": "#e0e3e6", "on-primary-fixed": "#141b2c", "secondary-container": "#6860ef", "on-background": "#181c1f", "on-tertiary-fixed-variant": "#005048", "tertiary-container": "#00201c", "primary-fixed": "#dbe2f9", "surface-container": "#eceef2", "on-primary": "#ffffff", "on-tertiary-container": "#009485", "on-error": "#ffffff", "on-secondary-container": "#fffbff", "inverse-surface": "#2d3134", "primary": "#000000", "surface-tint": "#565e71", "on-error-container": "#93000a", "surface-bright": "#f7f9fd", "secondary-fixed-dim": "#c3c0ff", "surface": "#f7f9fd", "on-secondary-fixed": "#100069", "surface-container-low": "#f2f4f8", "background": "#f7f9fd", "secondary-fixed": "#e3dfff", "surface-container-high": "#e6e8ec", "surface-container-highest": "#e0e3e6", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "secondary": "#4e45d5", "primary-container": "#141b2c", "on-primary-fixed-variant": "#3f4759" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-lg": "1.5rem", "margin": "2rem", "space-sm": "0.5rem", "gutter-lg": "2rem", "space-xs": "0.25rem", "margin-lg": "3rem", "space-xl": "2.5rem", "gutter-sm": "1rem", "space-md": "1rem", "margin-sm": "1rem" }, "fontFamily": { "body-sm": ["Inter"], "label-md": ["Inter"], "headline-xl": ["Manrope"], "headline-lg": ["Manrope"], "headline-md": ["Manrope"], "headline-sm": ["Manrope"], "headline-lg-mobile": ["Manrope"], "label-lg": ["Inter"], "body-lg": ["Inter"], "headline-xl-mobile": ["Manrope"], "body-md": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-xl": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "fontWeight": "400" }], "headline-xl-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><img alt="LedgerLine Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDW16V4BjFcH5l8pR4r2UMs4-6WT7oCHEiYClPmxvzB8FizyvJjapsI-hnI2FBs0vw6Ykw-RrspU2Z9f84ILBgbVV4bIiKZrrciWut-i7gKUaeKuDxeKbdlHhRUQM3WgzRo5VQ19LjvBvYzAE_Gsu1zgsSKmYhMKnElNdIGDFry2XEeVQwAS68vR_cOq4mZgHFW6plUiNkm4YZ5MEjhCjm-_aPW4OV2q1_xKAPQAIK3"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight font-bold">LedgerLine</span><span class="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase">FINANCIAL OS</span></div></div><p class="font-label-sm text-label-sm text-on-primary-container pl-1 pt-1">Every Transaction. Accounted For.</p></div><div class="px-space-md py-space-sm"><div class="bg-surface-container-lowest/5 rounded-xl p-space-xs"><label class="block font-label-sm text-label-sm text-on-primary-container px-space-xs mb-1 uppercase">Operating Role</label><div class="relative"><select class="w-full bg-surface-container-lowest/10 text-on-primary font-label-md text-label-md rounded-lg py-2 pl-3 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-tertiary-fixed cursor-pointer"><option class="bg-primary-container text-on-primary" selected="selected" value="admin-secops">Administrator (Global SecOps)</option><option class="bg-primary-container text-on-primary" value="holder">Account Holder (Executive)</option><option class="bg-primary-container text-on-primary" value="auditor">Compliance Auditor</option></select><span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-primary-container pointer-events-none text-base">unfold_more</span></div></div></div><nav class="px-space-md py-space-xs flex flex-col gap-space-md" data-active-classes="bg-surface-container-lowest/15 text-on-primary font-semibold"><div class="flex flex-col gap-1"><div class="flex items-center justify-between px-space-xs py-1"><span class="font-label-sm text-label-sm text-tertiary-fixed tracking-wider font-semibold uppercase">Administrative Control</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-lowest/10 text-tertiary-fixed font-mono">SEC-ADMIN</span></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="admin-dashboard" href="#">Admin Dashboard</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="user-management" href="#">User Management</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="account-management" href="#">Account Management</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="transaction-management" href="#">Transaction Management</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="reversal-management" href="#">Reversal Management</a></div><div class="flex flex-col gap-1 opacity-70 hover:opacity-100 transition-opacity"><div class="px-space-xs py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider font-semibold">Personal Banking</div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="user-dashboard" href="#">User Dashboard</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="my-accounts" href="#">My Accounts</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="transfer-money" href="#">Transfer Money</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="deposit-withdraw" href="#">Deposit &amp; Withdraw</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="transaction-history" href="#">Transaction History</a></div><div class="flex flex-col gap-1"><div class="px-space-xs py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider font-semibold">Compliance &amp; Audit</div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="auditor-dashboard" href="#">Auditor Dashboard</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="audit-logs" href="#">Audit Logs</a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="integrity-reports" href="#">Integrity Reports</a></div><div class="flex flex-col gap-1"><div class="px-space-xs py-1 font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider font-semibold">Security</div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-primary-container hover:bg-surface-container-lowest/10 hover:text-on-primary transition-all font-label-md text-label-md" data-path="security-alerts" href="#">Security Alerts &amp; Anomalies</a></div></nav></div><div class="p-space-md"><div class="bg-surface-container-lowest/5 rounded-xl p-space-sm flex items-center justify-between"><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></div><span class="font-label-sm text-label-sm text-on-primary-container">Ledger Immutable</span></div><span class="font-label-sm text-label-sm text-tertiary-fixed-dim font-mono">v4.19</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-10 pr-4 py-2 rounded-lg border-0 focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-outline" placeholder="Search telemetry, accounts, audit trails, tx hashes (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">FedNow Node: Synchronized</span><span class="text-outline-variant">•</span><span class="font-label-sm text-label-sm text-on-surface-variant">Ledger Cluster: 99.999% SLA</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full ring-2 ring-surface"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-xs cursor-pointer group"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-secondary transition-colors">Elena Rostova</span><span class="font-label-sm text-label-sm text-on-surface-variant">Lead Ops &amp; Security Admin</span></div><img alt="Elena Rostova Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcIh79Ofe4nSPKICQLcR-mg1zizf3-0GVsFbi9P9JNIOHNj1hWQg_QotMWnRVMm2a6TxocAN5TOPVTKrEnSOnjU_ZRjE-f4DjWBXPkyI87hwf8f_Wj-8rRKQCLswslcRxJmeds_m2iLQSKL8vWzO0sa-zqDg8R4BzsSGrmnwmRVgGYtOD2Lffvp6wTuTOezFr39KDxVobcK48S5Tk4TOGCZMmCXizgs0-JdCFDF6M"/><span class="material-symbols-outlined text-on-surface-variant text-base hidden sm:block">expand_more</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-gutter-lg py-space-lg w-full"><div class="flex flex-col w-full">
+<!-- Top Meta / Breadcrumb & Status Ribbon -->
+<div class="flex flex-col gap-space-sm mb-space-md">
+<div class="flex flex-wrap items-center justify-between gap-y-2">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold tracking-wider">Administration</span>
+<span class="text-outline-variant font-label-sm text-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold tracking-wider">Depository Vault Operations</span>
+<span class="ml-2 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold uppercase tracking-wider">SEC-TIER 1</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Real-Time Fedwire Node 09-NYC</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">HASH: 0x9bf4…c21a</span>
+</div>
+</div>
+<!-- Title & Primary Command Bar -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pt-1 pb-2">
+<div class="flex flex-col">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Account Directory &amp; Liquidity Vaults</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-0.5">
+          Dedicated master repository and regulatory custody console across all primary nodes, sweep structures, and fiduciary settlement corridors.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-base">file_download</span>
+          Export Custody Ledger
+        </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-base">sync_alt</span>
+          Batch Re-balancing
+        </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-semibold hover:bg-secondary-container transition-all shadow-sm">
+<span class="material-symbols-outlined text-base">add_circle</span>
+          + Create Master Vault
+        </button>
+</div>
+</div>
+<!-- Institutional Custody Coverage Banner -->
+<div class="w-full rounded-xl bg-primary-container text-on-primary p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-md relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-48 h-48 bg-secondary/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed/15 flex items-center justify-center text-tertiary-fixed shrink-0">
+<span class="material-symbols-outlined text-xl">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase font-mono tracking-wider">Aggregated Network Custody</span>
+<span class="font-headline-sm text-headline-sm text-on-primary font-bold tracking-tight">
+            $1,429,850,220.00 <span class="font-label-md text-label-md font-normal text-on-primary-container">USD EQ</span>
+</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<div class="flex items-center gap-2 px-3 py-1 rounded bg-surface-container-lowest/10 font-label-sm text-label-sm text-tertiary-fixed font-mono">
+<span class="material-symbols-outlined text-sm">shield</span>
+          FDIC / SWEEP PASS-THROUGH COVERAGE ACTIVE
+        </div>
+<div class="hidden sm:flex items-center gap-2 px-3 py-1 rounded bg-surface-container-lowest/5 font-label-sm text-label-sm text-on-primary-container">
+<span>7 Tier-1 Clearing Banks</span>
+<span>•</span>
+<span>Dual-Sign Enforced</span>
+</div>
+</div>
+</div>
+</div>
+<!-- KPI Bento Row (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Card 1: Operating Vaults -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold tracking-wider">Active Operating Vaults</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-base">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-4 flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">31,840</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Accounts</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 border-t-0 bg-surface-container-low/50 px-2 py-1 rounded">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Liquid Float</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface font-mono">$892.4M</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Average Yield</span>
+<span class="font-semibold text-emerald-600 font-mono">1.25% APY</span>
+</div>
+</div>
+<!-- Card 2: Treasury & Yield Reserves -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold tracking-wider">Treasury &amp; Yield Reserves</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-base">trending_up</span>
+</div>
+</div>
+<div class="mt-4 flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">4,912</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Accounts</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 bg-surface-container-low/50 px-2 py-1 rounded">
+<span class="font-body-sm text-body-sm text-on-surface-variant">UST Bills / Repo</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface font-mono">$412.1M</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Weighted APY</span>
+<span class="font-semibold text-secondary font-mono">5.12% APY</span>
+</div>
+</div>
+<!-- Card 3: Segregated Escrow / Multi-Sig -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold tracking-wider">Segregated Escrow</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-base">lock</span>
+</div>
+</div>
+<div class="mt-4 flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">1,420</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Accounts</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 bg-surface-container-low/50 px-2 py-1 rounded">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Escrow Principal</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface font-mono">$125.3M</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Governance</span>
+<span class="font-semibold text-on-surface">Multi-Sig Mandate</span>
+</div>
+</div>
+<!-- Card 4: Restricted / Frozen -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-error font-semibold tracking-wider">Restricted &amp; Frozen</span>
+<div class="w-8 h-8 rounded-lg bg-error-container/60 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-base">gavel</span>
+</div>
+</div>
+<div class="mt-4 flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-error tracking-tight">89</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Accounts</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 bg-error-container/20 px-2 py-1 rounded">
+<span class="font-body-sm text-body-sm text-error">Quarantine Pool</span>
+<span class="font-label-md text-label-md font-semibold text-error font-mono">$6.8M</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between font-label-sm text-label-sm text-error">
+<span>Legal Status</span>
+<span class="font-semibold uppercase tracking-wider font-label-sm text-label-sm">Sanctions Hold</span>
+</div>
+</div>
+</div>
+<!-- Main Directory & Details Split Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left 9 Columns: Search, Filters & Comprehensive Ledger Table -->
+<div class="xl:col-span-9 flex flex-col gap-space-md">
+<!-- Search, Pill Badges & Sliders Controller -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Search row -->
+<div class="flex flex-col md:flex-row items-center gap-space-sm">
+<div class="relative w-full flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-10 pr-4 py-2 rounded-lg border-0 focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-outline" placeholder="Search by account number, vault name, routing code, entity, or IBAN..." type="text" value="Apex Holdings"/>
+</div>
+<div class="flex items-center gap-2 w-full md:w-auto shrink-0">
+<div class="relative w-full md:w-56">
+<select class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg py-2 pl-3 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-secondary cursor-pointer">
+<option value="all">All Account Types</option>
+<option selected="" value="checking">Commercial Operating</option>
+<option value="treasury">High-Yield Treasury</option>
+<option value="escrow">Segregated Escrow</option>
+<option value="fx">FX Multi-Currency</option>
+<option value="capital">Capital Call Node</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-base">expand_more</span>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Additional Filters">
+<span class="material-symbols-outlined text-xl">tune</span>
+</button>
+</div>
+</div>
+<!-- Filter Badges Row & Balance Slider Controller -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pt-2">
+<!-- Pills -->
+<div class="flex flex-wrap items-center gap-1.5">
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-primary-container text-on-primary font-medium shadow-sm">
+              All Vaults <span class="ml-1 opacity-70">38,491</span>
+</button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors font-medium">
+              Active <span class="ml-1 opacity-70">38,104</span>
+</button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-error-container/40 text-error hover:bg-error-container/70 transition-colors font-medium">
+              Frozen <span class="ml-1 opacity-70">89</span>
+</button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors font-medium">
+              Under Dual-Sign <span class="ml-1 opacity-70">1,420</span>
+</button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors font-medium">
+              Negative Balances <span class="ml-1 opacity-70">0</span>
+</button>
+</div>
+<!-- Balance Filter Quick Metric Range -->
+<div class="flex items-center gap-3 bg-surface-container-low px-3 py-1.5 rounded-lg shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Min Balance:</span>
+<span class="font-label-md text-label-md text-on-surface font-mono font-semibold">$0 — &gt;$50M</span>
+<input class="w-24 accent-secondary cursor-pointer h-1.5 bg-surface-container-highest rounded" max="50" min="0" type="range" value="0"/>
+</div>
+</div>
+</div>
+<!-- Institutional Custody Directory Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left text-body-sm font-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase tracking-wider font-semibold">
+<th class="py-3 pl-4 pr-2">Vault Designation / Identifiers</th>
+<th class="py-3 px-3">Custodian &amp; Authority</th>
+<th class="py-3 px-3">Classification</th>
+<th class="py-3 px-3 text-right">Settled Balance</th>
+<th class="py-3 px-3 text-right">Daily Limit</th>
+<th class="py-3 px-3 text-center">Protocol Status</th>
+<th class="py-3 pl-2 pr-4 text-right">Controls</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1: Primary Operating Checking -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group cursor-pointer">
+<td class="py-3.5 pl-4 pr-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface font-mono font-bold text-xs">
+                      OP
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                        Primary Operating Checking
+                      </span>
+<div class="flex items-center gap-2 font-mono text-label-sm font-label-sm text-on-surface-variant">
+<span>•••• 8492</span>
+<span class="text-outline-variant">•</span>
+<span>ABA 02100021</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Apex Holdings LLC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Elena Rostova</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium">
+                    Commercial Operating
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-mono font-semibold text-on-surface text-body-md font-body-md tabular-nums">$2,845,920.18</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant font-mono">USD</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-mono text-on-surface tabular-nums">$500,000.00</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    Fedwire RTGS
+                  </span>
+</td>
+<td class="py-3.5 pl-2 pr-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-error transition-colors" title="Emergency Freeze">
+<span class="material-symbols-outlined text-lg">pause_circle</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" title="Audit Ledger">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="Adjust Cap">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Strategic Treasury Reserve -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors group cursor-pointer">
+<td class="py-3.5 pl-4 pr-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary font-mono font-bold text-xs">
+                      TR
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                        Strategic Treasury Reserve
+                      </span>
+<div class="flex items-center gap-2 font-mono text-label-sm font-label-sm text-on-surface-variant">
+<span>•••• 3109</span>
+<span class="text-outline-variant">•</span>
+<span>FedFund TFDXX</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Apex Holdings LLC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Elena Rostova</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-secondary font-label-sm text-label-sm font-medium">
+                      High-Yield (5.12%)
+                    </span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-mono font-semibold text-on-surface text-body-md font-body-md tabular-nums">$1,650,430.24</span>
+<div class="font-label-sm text-label-sm text-emerald-600 font-mono">+$241.09 accrued</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Unlimited (Sweep)</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    Active Sweep
+                  </span>
+</td>
+<td class="py-3.5 pl-2 pr-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="Vault Info">
+<span class="material-symbols-outlined text-lg">insights</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="More Options">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Master Liquidity Pooling Vault -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group cursor-pointer">
+<td class="py-3.5 pl-4 pr-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface font-mono font-bold text-xs">
+                      LP
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                        Master Liquidity Pooling Vault
+                      </span>
+<div class="flex items-center gap-2 font-mono text-label-sm font-label-sm text-on-surface-variant">
+<span>•••• 0019</span>
+<span class="text-outline-variant">•</span>
+<span>NY-FED TIER-0</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Sequoia Capital Management</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">David Sterling (Director)</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium">
+                    Multi-Tier Treasury
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-mono font-bold text-on-surface text-body-md font-body-md tabular-nums">$128,450,000.00</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant font-mono">USD Primary</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-mono text-on-surface tabular-nums">$25,000,000.00</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Dual-Auth Mode
+                  </span>
+</td>
+<td class="py-3.5 pl-2 pr-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="View Ledgers">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="More Options">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Series B Capital Escrow -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group cursor-pointer">
+<td class="py-3.5 pl-4 pr-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface font-mono font-bold text-xs">
+                      ES
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                        Series B Capital Escrow
+                      </span>
+<div class="flex items-center gap-2 font-mono text-label-sm font-label-sm text-on-surface-variant">
+<span>•••• 9921</span>
+<span class="text-outline-variant">•</span>
+<span>ESC-402</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Stripe Inc. Client Depository</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Marcus Vance (Trustee)</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium">
+                    Segregated Escrow
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-mono font-bold text-on-surface text-body-md font-body-md tabular-nums">$34,200,000.00</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant font-mono">USD Escrow</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Board Auth Req.</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Multi-Sig (2/3)
+                  </span>
+</td>
+<td class="py-3.5 pl-2 pr-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="Sign Mandate">
+<span class="material-symbols-outlined text-lg">key</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="More Options">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: FX Cross-Border Settlement Pool -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group cursor-pointer">
+<td class="py-3.5 pl-4 pr-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface font-mono font-bold text-xs">
+                      FX
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                        FX Cross-Border Settlement Pool
+                      </span>
+<div class="flex items-center gap-2 font-mono text-label-sm font-label-sm text-on-surface-variant">
+<span>•••• 4402</span>
+<span class="text-outline-variant">•</span>
+<span>IBAN DE89••</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Armonk Global Tech</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Elena Rostova</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium">
+                    EUR / GBP / USD
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-mono font-semibold text-on-surface text-body-md font-body-md tabular-nums">€14,820,000.00</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant font-mono">~$16.1M USD EQ</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-mono text-on-surface tabular-nums">€5,000,000.00</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    SEPA Instant
+                  </span>
+</td>
+<td class="py-3.5 pl-2 pr-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="Currency Swap">
+<span class="material-symbols-outlined text-lg">currency_exchange</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="More Options">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Suspicious Activity Hold Vault (Restricted) -->
+<tr class="bg-error-container/20 hover:bg-error-container/30 transition-colors group cursor-pointer border-l-4 border-l-error">
+<td class="py-3.5 pl-4 pr-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-error-container text-error flex items-center justify-center font-mono font-bold text-xs">
+<span class="material-symbols-outlined text-base">lock</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-error font-bold">
+                          Suspicious Activity Hold Vault
+                        </span>
+<span class="material-symbols-outlined text-error text-sm">warning</span>
+</div>
+<div class="flex items-center gap-2 font-mono text-label-sm font-label-sm text-on-surface-variant">
+<span>•••• 7120</span>
+<span class="text-outline-variant">•</span>
+<span>FINCEN-ALERT-891</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="text-error font-medium">Veloce FinTech Overseas</span>
+<span class="font-label-sm text-label-sm text-error/80 italic">Unauthorized Entity</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-error-container/40 text-error font-label-sm text-label-sm font-medium">
+                    Commercial Checking
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-mono font-bold text-error text-body-md font-body-md tabular-nums">$1,420,500.00</span>
+<div class="font-label-sm text-label-sm text-error/80 font-mono">FUNDS RESTRICTED</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-mono text-error font-semibold tabular-nums">$0.00 (FROZEN)</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-error-container text-error font-label-sm text-label-sm font-bold tracking-tight">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+                    Sanctions Hold
+                  </span>
+</td>
+<td class="py-3.5 pl-2 pr-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded bg-error text-on-error font-label-sm text-label-sm font-semibold hover:bg-error/90 transition-colors">
+                      Review Case
+                    </button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Payroll Trust Escrow -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group cursor-pointer">
+<td class="py-3.5 pl-4 pr-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface font-mono font-bold text-xs">
+                      PT
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                        Payroll Trust Escrow
+                      </span>
+<div class="flex items-center gap-2 font-mono text-label-sm font-label-sm text-on-surface-variant">
+<span>•••• 5510</span>
+<span class="text-outline-variant">•</span>
+<span>FID-91204</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Gusto Payroll Trust</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Amanda Morales</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium">
+                    Fiduciary Trust
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-mono font-bold text-on-surface text-body-md font-body-md tabular-nums">$8,940,220.00</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant font-mono">USD Fiduciary</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<span class="font-mono text-on-surface tabular-nums">$10,000,000.00</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    ACH Direct
+                  </span>
+</td>
+<td class="py-3.5 pl-2 pr-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="View Ledgers">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="More Options">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="bg-surface-container-low px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing <span class="font-semibold text-on-surface">1 - 7</span> of <span class="font-semibold text-on-surface">38,491</span> institutional vaults</span>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-mono">BLOCK #19,842,912 SYNCED</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface disabled:opacity-40 font-label-md text-label-md" disabled="">
+              Previous
+            </button>
+<button class="w-8 h-8 rounded bg-primary-container text-on-primary font-label-md text-label-md font-semibold">
+              1
+            </button>
+<button class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-label-md text-label-md">
+              2
+            </button>
+<button class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-label-md text-label-md">
+              3
+            </button>
+<span class="px-1 text-on-surface-variant">…</span>
+<button class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-label-md text-label-md">
+              5,499
+            </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold">
+              Next
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 3 Columns: Quick Account Control & Compliance Inspector Panel -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- High Priority Inspection Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between pb-2 border-b-0">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-label-sm text-label-sm text-error font-bold uppercase tracking-wider">Legal Hold Active</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">NY-89102</span>
+</div>
+<!-- Entity Identity -->
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Inspecting Vault</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight mt-0.5">Veloce FinTech Overseas</h2>
+<span class="font-mono text-body-sm text-body-sm text-on-surface-variant">Acct: •••• 7120 | FinCEN 314(a) Flag</span>
+</div>
+<!-- Blocked Funds Visual Display -->
+<div class="bg-error-container/30 rounded-xl p-3 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-error uppercase font-semibold">Total Blocked Custody</span>
+<span class="font-headline-md text-headline-md font-extrabold text-error font-mono tracking-tight">$1,420,500.00</span>
+<div class="flex items-center gap-1.5 text-error text-label-sm font-label-sm pt-1">
+<span class="material-symbols-outlined text-sm">gavel</span>
+<span>Court Order #NY-89102 Enforced</span>
+</div>
+</div>
+<!-- Telemetry Breakdown -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Jurisdiction</span>
+<span class="font-medium text-on-surface font-mono">BVI / US-Corridor</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Freeze Date</span>
+<span class="font-medium text-on-surface font-mono">Oct 24, 2024 (14:02 UTC)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Authorized Signers</span>
+<span class="font-medium text-error font-mono">REVOKED (0/2 Active)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Outbound Velocity</span>
+<span class="font-medium text-on-surface font-mono">$0.00 / 24h</span>
+</div>
+</div>
+<!-- Administrative Action Buttons -->
+<div class="flex flex-col gap-2 pt-2">
+<button class="w-full py-2.5 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-base">file_open</span>
+            Download SAR Package
+          </button>
+<button class="w-full py-2.5 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-base">history_edu</span>
+            Audit Ledger Trail
+          </button>
+<button class="w-full py-2.5 px-3 rounded-lg bg-error text-on-error hover:bg-error/90 font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors shadow-sm mt-1">
+<span class="material-symbols-outlined text-base">admin_panel_settings</span>
+            Override Freeze (Requires 2 Keycards)
+          </button>
+</div>
+</div>
+<!-- Quick Vault Creation Protocol Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface-variant tracking-wider">Fast Deploy Node</span>
+<span class="material-symbols-outlined text-secondary text-lg">bolt</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Instantiate a new Tier-1 institutional vault with automated dual-custody parameters and FedNow instant sweep.
+        </p>
+<div class="flex flex-col gap-2 pt-1">
+<input class="w-full bg-surface-container-low text-on-surface text-body-sm px-3 py-1.5 rounded-lg border-0 focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Vault Identifier / Label" type="text"/>
+<select class="w-full bg-surface-container-low text-on-surface text-label-md rounded-lg py-1.5 px-3 border-0 focus:outline-none focus:ring-1 focus:ring-secondary cursor-pointer">
+<option>Multi-Tier Operating Checking</option>
+<option>Segregated Liquidity Escrow</option>
+<option>Treasury Yield Reserve (Repo)</option>
+</select>
+<button class="w-full py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-surface-tint transition-colors flex items-center justify-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-base">add</span>
+            Initialize Contract
+          </button>
+</div>
+</div>
+<!-- Ledger Health & Security Summary -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold tracking-wider">Network Health</span>
+<span class="font-label-sm text-label-sm text-emerald-600 font-semibold font-mono">OPTIMAL</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-emerald-500 h-1.5 rounded-full w-full"></div>
+</div>
+<div class="flex justify-between items-center text-label-sm font-label-sm text-on-surface-variant pt-1">
+<span>Ledger Checksum Verification</span>
+<span class="font-mono text-on-surface font-semibold">100% Matches</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
