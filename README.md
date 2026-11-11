@@ -28,23 +28,23 @@ LedgerLine is engineered around five non-negotiable financial pillars:
 ## 2. System Architecture
 
 ```mermaid
-graph TD
+flowchart TD
     Client["Client UI (Next.js App Router / Stitch UI)"] --> API["Next.js Route Handlers (/api/v1/*)"]
     
-    subgraph Security Layer
+    subgraph Security["Security Layer"]
         API --> Auth["Authentication & Session Middleware (JWT / bcrypt)"]
         API --> RBAC["Role-Based Access Control (ADMIN / AUDITOR / HOLDER)"]
         API --> Idempotency["Idempotency Middleware (SHA-256 Key Cache)"]
     end
     
-    subgraph Business Logic & Services
+    subgraph Services["Business Logic & Services"]
         Auth --> UserService["UserService (Provisioning & Lifecycle)"]
         Auth --> TxnService["TransactionService (Transfers & Deposits)"]
         Auth --> AuditService["AuditService (Immutable Event Logging)"]
         Auth --> AnomalyService["AnomalyDetector (Brute-Force & Velocity)"]
     end
     
-    subgraph PostgreSQL Database (Supabase)
+    subgraph Database["PostgreSQL Database (Supabase)"]
         TxnService --> StoredProcs["Atomic Stored Procedures (Row Locks FOR UPDATE)"]
         StoredProcs --> AccountsTable["accounts (CHECK balance_paise >= 0)"]
         StoredProcs --> TxnsTable["transactions"]
